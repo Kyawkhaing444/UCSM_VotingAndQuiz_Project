@@ -8,10 +8,56 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/MDB/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/MDB/css/mdb.css">
-    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/media2.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <title>ucsm voting</title>
   </head>
   <body>
+  <!---nav bar =================-->
+
+  <!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark light-color">
+
+<!-- Navbar brand -->
+<a class="navbar-brand " href="../Homeshop" style="color:black;"><i class="fas fa-chevron-left"></i></a>
+<h2 class="navbar-brand " href="#" style="color:black;" >Shop Name's Items</h2>
+
+<!-- Collapse button -->
+
+<i class="fas fa-bars navbar-toggler" data-toggle="collapse" data-target="#basicExampleNav" style="color:black;" ></i>
+<!-- Collapsible content -->
+<div class="collapse navbar-collapse" id="basicExampleNav">
+
+  <!-- Links -->
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link b" href="home" style="color:black;">Home
+        <span class="sr-only">(current)</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="../list" style="color:black;">Vote</a>
+    </li>
+    <li class="nav-item " >
+      <a class="nav-link" href="../Homeshop" style="color:black;">Shop</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link" href="../Homequiz" style="color:black;">Quizz</a>
+    </li>
+
+    <!-- Dropdown -->
+   
+
+  </ul>
+  <!-- Links -->
+
+  
+</div>
+<!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+  <!-- nab bar =================-->
     <section>
       <div class="container">
         <!---King & Queen -->
@@ -23,10 +69,10 @@
 
                 <div class="col-sm-12">
                <div class="card shop" style="margin-top:20px;padding-top:10px;">
-                    <div class="amount" style="margin-left:70%;">
+                    <div class="amount">
                             1000 Kyats
                         </div>
-                  <img class="card-img-top image" src="../images/{{ $s->photoURL }}" alt="Card image cap"  style="width:90%;margin-left:5%;padding-bottom:10px;height:300px !important;">
+                  <img class="card-img-top im" src="../images/{{ $s->photoURL }}" alt="Card image cap" >
                   <div class="card-footer">
                       <h5 class="description"> {{ $s->name }}</h4>
                   </div>

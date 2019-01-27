@@ -9,25 +9,60 @@
     <link rel="stylesheet" href="css/MDB/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/MDB/css/mdb.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <title>ucsm voting</title>
   </head>
-  <body>
-        <section>
-                <div class="container">
-                  <div class="row" style="box-shadow: none;">
-                    <div class="col-md-12 z-depth-1" style="box-shadow:none;">
-                            <img src="images/left-arrow.png" alt="<" style="width:25px;height: 30px;float:left;margin-top: 20px;margin-bottom : 20px;">
-                              <h4 class=" light-color text-center" style="font-family: sans-serif;margin-top: 20px; margin-bottom : 20px;text-algin:center;box-shadow:0px;" >
-                                Quizzes
+  <body >
+  <!---nav bar =================-->
 
-                              </h4>
+  <!--Navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark light-color">
 
-                    </div>
-                  </div>
-                </div>
-              </section>
-    <section>
-      <div class="container">
+<!-- Navbar brand -->
+<a class="navbar-brand " href="#" style="color:black;display:none;"><i class="fas fa-chevron-left"></i></a>
+<h2 class="navbar-brand " href="#" style="color:black;" >UCSM Fresher Welcome</h2>
+
+<!-- Collapse button -->
+
+<i class="fas fa-bars navbar-toggler" data-toggle="collapse" data-target="#basicExampleNav" style="color:black;" ></i>
+<!-- Collapsible content -->
+<div class="collapse navbar-collapse" id="basicExampleNav">
+
+  <!-- Links -->
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+      <a class="nav-link b" href="home" style="color:black;">Home
+        <span class="sr-only">(current)</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="list" style="color:black;">Vote</a>
+    </li>
+    <li class="nav-item " >
+      <a class="nav-link" href="Homeshop" style="color:black;">Shop</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link" href="Homequiz" style="color:black;">Quizz</a>
+    </li>
+
+    <!-- Dropdown -->
+   
+
+  </ul>
+  <!-- Links -->
+
+  
+</div>
+<!-- Collapsible content -->
+
+</nav>
+<!--/.Navbar-->
+  <!-- nab bar =================-->
+  <section>
+
+  </section>
+      
+      <div class="container" style="background-color:white;">
         <!---King & Queen -->
            <div class="row">
 
@@ -35,7 +70,7 @@
           <a href="selection/Fresher Queen" style="color : black;">
 
             <div class="card card-right ">
-             <img class="card-img-top image" src="css/MDB/q1.png" alt="Card image cap" style="width:100%;height:160px;">
+             <img class="card-img-top image" src="css/MDB/q1.png" alt="Card image cap" >
             <div class="card-footer">
              <h5 class="description">Fresher Queen</h4>
              </div>
@@ -45,7 +80,7 @@
         </a>
                     <a href="selection/Fresher King" style="color : black;">
            <div class="card">
-              <img class="card-img-top image" src="css/MDB/k3.png" alt="Card image cap" style="width:100%;height:160px;">
+              <img class="card-img-top image" src="css/MDB/k3.png" alt="Card image cap" >
               <div class="card-footer">
                <h5 class="description">Fresher King</h4>
              </div>
@@ -59,7 +94,7 @@
                  <a href="selection/The Whole Queen" style="color : black;">
 
                <div class="card card-right">
-                <img class="card-img-top image" src="css/MDB/q2.png" alt="Card image cap" style="width:100%;height:160px">
+                <img class="card-img-top image" src="css/MDB/q2.png" alt="Card image cap" >
                 <div class="card-footer">
                   <h5 class="description">The Whole Queen</h4>
                  </div>
@@ -68,7 +103,7 @@
             </a>
             <a href="selection/The Whole King" style="color : black;">
                 <div class="card">
-                   <img class="card-img-top image" src="css/MDB/ke2.png" alt="Card image cap" style="width:100%;height:160px">
+                   <img class="card-img-top image" src="css/MDB/ke2.png" alt="Card image cap" >
                    <div class="card-footer">
                     <h5 class="description">The Whole King</h4>
                   </div>
@@ -83,18 +118,18 @@
                 <a href="selection/Girl stylish" style="color : black;">
 
               <div class="card card-right ">
-               <img class="card-img-top image" src="css/MDB/q3.png" alt="Card image cap" style="width:100%;height:160px;">
+               <img class="card-img-top image" src="css/MDB/q3.png" alt="Card image cap" >
                <div class="card-footer">
-                 <h5 class="description">Girl Stylish</h4>
+                 <h5 class="description">Miss Stylish</h4>
                 </div>
 
                </div>
             </a>
             <a href="selection/Boy stylish" style="color : black;">
                <div class="card">
-                  <img class="card-img-top image" src="css/MDB/k1.png" alt="Card image cap" style="width:100%;height:160px;">
+                  <img class="card-img-top image" src="css/MDB/k1.png" alt="Card image cap" >
                   <div class="card-footer">
-                   <h5 class="description">Boy Stylish</h4>
+                   <h5 class="description">Mirs Stylish</h4>
                  </div>
                 </a>
 
@@ -105,7 +140,7 @@
                 <!--======================-->
                 <a href="selection/Singer" style="color : black;">
               <div class="card card-right ">
-               <img class="card-img-top image" src="css/MDB/micro.png" alt="Card image cap" style="width:100%;height:160px;">
+               <img class="card-img-top image" src="css/MDB/micro.png" alt="Card image cap" >
                <div class="card-footer">
                  <h5 class="description"> Singer
                  </h4>
@@ -115,7 +150,7 @@
             </a>
             <a href="selection/Performance" style="color : black;">
                <div class="card">
-                  <img class="card-img-top image" src="css/MDB/t4.jpg" alt="Card image cap" style="width:100%;height:160px">
+                  <img class="card-img-top image" src="css/MDB/t4.jpg" alt="Card image cap" >
                   <div class="card-footer">
                    <h5 class="description"> Performance</h4>
                  </div>
