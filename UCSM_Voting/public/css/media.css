@@ -1,4 +1,4 @@
-@media only screen and (max-width: 320px){
+@media only screen and (max-width: 480px) and (min-width: 250px){
     .card{width:48%;margin-top:20px;}
     .r{
      position: absolute;
@@ -7,52 +7,19 @@
        float: right;
        width:48%;
    }
-  .card .image{
-
-     width:100px;
-     height: 130px !important;
-   }
+ 
    h5{
-       font-size:8px !important;
+       font-size:8px ;
        font-family: sans-serif;
        font-weight: 0px;
    }
-   .shop .image{
-       height: 180px;
+   
+   .card .image{
+     
+       height:160px;
    }
-   .amount{
-       margin-left:50% !important;
-   }
-
 }
-@media only screen and (max-width: 480px){
-   .card{width:48%;margin-top:20px;}
-   .r{
-    position: absolute;
-  }
-  .card-right{
-      float: right;
-      width:48%;
-  }
- .card .image{
-
-    width:100px;
-    height: 200px;
-  }
-  h5{
-      font-size:10px !important;
-      font-family: sans-serif;
-      font-weight: 0px;
-  }
-  .shop .image{
-    height: 220px;
-}
-.amount{
-    margin-left:50%;
-}
-
-}
-@media only screen and (max-width: 768px){
+@media only screen and (min-width: 600px){
     .card{width:48%;margin-top:20px;}
     .r{
      position: absolute;
@@ -61,30 +28,19 @@
        float: right;
        width:48%;
    }
-  .card .image{
-
-     width:100px;
-
-     height: 200px !important;
-   }body{
-       width:100%;
-
-
-   }
-   .shop{
-       width:100%;
-
-   }
-
-
+ 
    h5{
-    font-size:13px !important;
-    font-family: sans-serif;
-    font-weight: 0px;
+       font-size:8px ;
+       font-family: sans-serif;
+       font-weight: 0px;
+   }
+   
+   .card .image{
+     
+       height:200px;
+   }
 }
-
-}
-@media only screen and (max-width: 1024px){
+@media only screen and (min-width: 1300px){
     .card{width:48%;margin-top:20px;}
     .r{
      position: absolute;
@@ -93,35 +49,16 @@
        float: right;
        width:48%;
    }
-  .card .image{
-
-     width:100px;
-
-     height: 200px !important;
-   }body{
-       width:100%;
-
-
-   }
-   .shop{
-       width:100%;
-
-   }
-   .shop .image{
-
-      height:400px;
-
-   }
-
+ 
    h5{
-    font-size:13px !important;
-    font-family: sans-serif;
-    font-weight: 0px;
-}
-.amount{
-    margin-left:65%;
+       font-size:8px ;
+       font-family: sans-serif;
+       font-weight: 0px;
+   }
+   
+   .card .image{
+     
+       height:250px;
+   }
 }
 
-
-
-}
