@@ -1,0 +1,89 @@
+@media only screen and (max-width: 480px){
+    .card{
+        margin-top:20px;
+    }
+   .image{
+        width:70%;
+        height:100%;
+
+        margin-left:15%;
+        padding-top:10px;
+        padding-bottom: 10px;
+    }
+    .card-right{float:right;}
+    .amount{position: absolute;
+        border-radius: .2rem;
+        background-color:rgba(0,0,0,0.5);
+        border: 0px;
+        color:white;
+     float: right;
+margin-top:10px;}
+ 
+ }
+ @media only screen and (max-width: 768px){
+    .card{
+        margin-top:20px;
+       
+       
+    }
+   .image{
+        width:70%;
+        height:100%;
+
+        margin-left:15%;
+        padding-top:10px;
+        padding-bottom: 10px;
+    }
+    .card-right{float:right;}
+    .amount{position: absolute;
+        border-radius: .2rem;
+        background-color:rgba(0,0,0,0.5);
+        border: 0px;
+        color:white;
+    float: right;
+margin-top:10px;}
+.c{
+    height:250px !important;
+  
+}
+.c .image{
+
+  height:200px !important;
+}
+button{
+  height:50px;
+  width:120px;
+    
+}
+ 
+ }
+ @media only screen and (max-width: 1024px){
+    .card{
+        margin-top:20px;
+       
+       
+    }
+   .image{
+        width:70%;
+        height:100%;
+
+        margin-left:15%;
+        padding-top:10px;
+        padding-bottom: 10px;
+    }
+    .card-right{float:right;}
+.c{
+    height:300px !important;
+  
+}
+.c .image{
+
+  height:230px !important;
+}
+button{
+  height:50px;
+  width:120px;
+    
+}
+ 
+ }

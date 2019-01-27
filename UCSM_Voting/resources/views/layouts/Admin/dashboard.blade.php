@@ -61,8 +61,9 @@ position:absolute;
 
                         <a class="nav-link waves-effect" href="HomePage" ><img style="height:30px;width:30px;margin-top:-10px;" src="https://findicons.com/files/icons/1580/devine_icons_part_2/128/home.png" alt="">  Go Home</a>
                 </li>
+
                 <li class="nav-item">
-                        <a class="nav-link waves-effect" href="#" ><i class="fa fa-user fa-fw"></i>Profile</a>
+                        <a class="nav-link waves-effect" href="#" ><i class="fa fa-user fa-fw"></i>{{ Auth::user()->name }}</a>
                 </li>
                 <li class="nav-item">
                         <a class="nav-link waves-effect" href="admin/logout" ><i class="fas fa-sign-out-alt"></i> LogOut</a>
@@ -87,17 +88,14 @@ position:absolute;
           <a href="dashboard" class="list-group-item list-group-item-action active waves-effect">
             <i class="fas fa-chart-pie mr-3"></i>Dashboard
           </a>
-          <a href="student" class="list-group-item list-group-item-action waves-effect">
-            <i class="fas fa-user mr-3"></i>Student</a>
-          <a href="magazine" class="list-group-item list-group-item-action waves-effect">
-            <i class="fas fa-table mr-3"></i>Magazine</a>
-
-          <a href="event" class="list-group-item list-group-item-action waves-effect">
-                  <i class="far fa-calendar-alt mr-3"></i></i>Event</a>
-            <a href="group" class="list-group-item list-group-item-action waves-effect">
-                  <i class="fas fa-star-of-david mr-3"></i>Group</a>
-          <a href="admin" class="list-group-item list-group-item-action waves-effect">
-                  <i class="fas fa-smile mr-3"></i></i>Admin</a>
+          <a href="shop" class="list-group-item list-group-item-action waves-effect">
+            <i class="fas fa-user mr-3"></i>Shop</a>
+            <a href="participant" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-user mr-3"></i>Add participant</a>
+          <a href="showparticipant" class="list-group-item list-group-item-action waves-effect">
+            <i class="fas fa-smile mr-3"></i>View participant</a>
+          <a href="quiz" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-table mr-3"></i></i>Quiz</a>
 
 
 
