@@ -299,10 +299,9 @@ use App\shopitem;
                             <td><img src="images/{{ $st->photoURL }}" class="rounded-circle z-depth-1" style="width: 50px; height: 45px; margin-top: -10px;"></td>
                             <td>{{ $st->price }}</td>
                             <td>
-                                    <a class="btn btn-success waves-effect btn-small" data-toggle="modal" data-target="#{{str_replace(' ', '', $s->name)}}" style="padding: 8px 12px 8px 12px;margin-top: -10px" >View Item</a>
-                                  <a class="btn btn-success waves-effect btn-small" href="shop/{{ $st->id }}/edit" style="padding: 8px 12px 8px 12px;margin-top: -10px">Live View</a>
-                                  <a class="btn btn-warning waves-effect btn-small" href="shop/{{ $st->id }}/edit" style="padding: 8px 12px 8px 12px;margin-top: -10px">Edit</a>
-                                  <a class="btn btn-danger waves-effect btn-small" href="shop/{{ $st->id }}/delete" style="padding: 8px 12px 8px 12px;margin-top: -10px"><i class="fas fa-times-circle"></i></a>
+
+                                  <a class="btn btn-warning waves-effect btn-small" href="shop_item/{{ $st->id }}/edit" style="padding: 8px 12px 8px 12px;margin-top: -10px">Edit</a>
+                                  <a class="btn btn-danger waves-effect btn-small" href="shop_item/{{ $st->id }}/delete" style="padding: 8px 12px 8px 12px;margin-top: -10px"><i class="fas fa-times-circle"></i></a>
 
                                   </td>
                         </tr>

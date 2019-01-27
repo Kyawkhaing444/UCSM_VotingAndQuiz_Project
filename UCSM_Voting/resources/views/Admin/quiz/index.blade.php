@@ -11,7 +11,7 @@
       <!--Card content-->
       <div class="card-body d-sm-flex justify-content-between">
         <h4 class="mb-2 mb-sm-0 pt-1">
-          <span style="font-weight: bolder;">Shop</span>
+          <span style="font-weight: bolder;">Quizzes</span>
         </h4>
 
         <form class="d-flex justify-content-center">

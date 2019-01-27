@@ -39,8 +39,14 @@ Route::resource('parti_cata', 'parti_cataController')->middleware('auth');
 Route::resource('shop', 'ShopController')->middleware('auth');
 Route::resource('shopitem', 'ShopitemController')->middleware('auth');
 Route::get('shop/{event}/delete','ShopController@destroy')->middleware('auth');
-
+Route::get('participant/{event}/delete','ParticipantController@destroy')->middleware('auth');
+Route::resource('parti_cata', 'parti_cataController')->middleware('auth');
+Route::get('parti_cata/{event}/delete','parti_cataController@destroy')->middleware('auth');
+Route::get('shop_item/{event}/delete','ShopitemController@destroy')->middleware('auth');
 Route::resource('quiz', 'QuizController')->middleware('auth');
+
+Route::resource('shop_item', 'ShopitemController')->middleware('auth');
+
 
 
 

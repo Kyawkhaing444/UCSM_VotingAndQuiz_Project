@@ -37,7 +37,7 @@ class parti_cataController extends Controller
     {
         $this->validate($request,[
 
-
+          'name' => 'required',
 
             ]);
 
@@ -69,7 +69,9 @@ class parti_cataController extends Controller
      */
     public function edit($id)
     {
-        //
+       $parti_cata = parti_cata::find($id);
+       $bool = 'edit';
+       return view('Admin.parti_cata.edit',compact('parti_cata','bool'));
     }
 
     /**
@@ -81,7 +83,17 @@ class parti_cataController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+
+            'name' => 'required',
+
+              ]);
+
+            $input = $request->all();
+
+            parti_cata::whereId($id)->first()->update($input);
+
+            return redirect('participant');
     }
 
     /**
@@ -92,6 +104,7 @@ class parti_cataController extends Controller
      */
     public function destroy($id)
     {
-        //
+        parti_cata::destroy($id);
+        return redirect('participant');
     }
 }

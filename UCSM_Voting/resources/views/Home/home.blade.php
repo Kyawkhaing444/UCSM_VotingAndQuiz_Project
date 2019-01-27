@@ -25,7 +25,7 @@
                     </div>
                   </div>
                 </div>
-              </section>
+      </section>
     <section>
       <div class="container">
         <!---King & Queen -->

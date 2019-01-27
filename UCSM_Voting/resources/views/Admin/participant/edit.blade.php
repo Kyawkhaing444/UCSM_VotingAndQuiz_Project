@@ -1,4 +1,4 @@
-@extends('layouts.Admin.shop')
+@extends('layouts.Admin.participant')
 
 @section('content')
 <!--Main layout-->
@@ -11,7 +11,7 @@
       <!--Card content-->
       <div class="card-body d-sm-flex justify-content-between">
         <h4 class="mb-2 mb-sm-0 pt-1">
-          <span style="font-weight: bolder;">Update Shop</span>
+          <span style="font-weight: bolder;">Update Participant</span>
         </h4>
 
         <form class="d-flex justify-content-center">
@@ -42,7 +42,7 @@
 
 
                 <div class="col-lg-12" style="margin: 32px 8px 16px 4px">
-                        {!! Form::model($shop,['method'=>'POST','action'=>['ShopController@update',$shop->id],'files'=>true]) !!}
+                        {!! Form::model($participant,['method'=>'POST','action'=>['ParticipantController@update',$participant->id],'files'=>true]) !!}
 
                         {!! Form::hidden('_method', 'PATCH') !!}
 
@@ -51,9 +51,25 @@
                                                     <span class="input-group-text" id="basic-addon9"><i class="fas fa-user"></i></span>
                                                   </div>
 
-                                                 {!! Form::text('name',$shop->name,['class'=>'form-control','placeholder' => 'Name']) !!}
+                                                 {!! Form::text('name',$participant->name,['class'=>'form-control','placeholder' => 'Name']) !!}
 
                                                 </div>
+
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                      <span class="input-group-text" id="basic-addon10"  style="width:45px;"><i class="fas fa-user"></i></span>
+                                                    </div>
+
+                                                      @php
+                                                      $sh = [];
+                                                      foreach($cata as $c){
+                                                         $sh[$c->id] = $c->name;
+                                                      }
+                                                      @endphp
+
+                                                   {!! Form::select('shop',$sh, null, ['placeholder' => 'Select Catagory Name ...','class'=>'form-control']); !!}
+
+                                                 </div>
 
 
                                                       <div class="input-default-wrapper mt-3">
@@ -74,7 +90,7 @@
                                                 <div class="ml-auto">
 
 
-                                                            <a href="../../shop" class="btn btn-white waves-effect btn-md" style="float:left;"
+                                                            <a href="../../participant" class="btn btn-white waves-effect btn-md" style="float:left;"
 
                                                               >Cancel</a>
 

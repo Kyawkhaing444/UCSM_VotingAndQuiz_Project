@@ -179,7 +179,8 @@ use App\shop;
                                                     ?></td>
 
                                                     <td>
-                                                          <a class="btn btn-danger waves-effect btn-small" href="magazine/{{ $ca->id }}/delete" style="padding: 8px 12px 8px 12px;margin-top: -10px"><i class="fas fa-times-circle"></i></a>
+                                                            <a class="btn btn-warning waves-effect btn-small" href="parti_cata/{{ $ca->id }}/edit" style="padding: 8px 12px 8px 12px;margin-top: -10px">Edit</a>
+                                                          <a class="btn btn-danger waves-effect btn-small" href="parti_cata/{{ $ca->id }}/delete" style="padding: 8px 12px 8px 12px;margin-top: -10px"><i class="fas fa-times-circle"></i></a>
                                                           </td>
                                                 </tr>
                                                   </tbody>

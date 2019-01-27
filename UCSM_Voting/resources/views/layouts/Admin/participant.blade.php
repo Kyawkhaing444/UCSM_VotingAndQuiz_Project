@@ -85,6 +85,7 @@ position:absolute;
       </a>
 
       <div class="list-group list-group-flush">
+    @if($bool == 'index')
           <a href="dashboard" class="list-group-item list-group-item-action  waves-effect">
             <i class="fas fa-chart-pie mr-3"></i>Dashboard
           </a>
@@ -96,6 +97,21 @@ position:absolute;
                             <i class="fas fa-smile mr-3"></i>View participant</a>
           <a href="quiz" class="list-group-item list-group-item-action waves-effect">
                     <i class="fas fa-table mr-3"></i></i>Quiz</a>
+    @endif
+
+    @if($bool == 'edit')
+    <a href="../../dashboard" class="list-group-item list-group-item-action  waves-effect">
+            <i class="fas fa-chart-pie mr-3"></i>Dashboard
+          </a>
+          <a href="../../shop" class="list-group-item list-group-item-action waves-effect">
+            <i class="fas fa-user mr-3"></i>Shop</a>
+            <a href="../../participant" class="list-group-item list-group-item-action active waves-effect">
+                    <i class="fas fa-user mr-3"></i>Add participant</a>
+                    <a href="../../showparticipant" class="list-group-item list-group-item-action waves-effect">
+                            <i class="fas fa-smile mr-3"></i>View participant</a>
+          <a href="../../quiz" class="list-group-item list-group-item-action waves-effect">
+                    <i class="fas fa-table mr-3"></i></i>Quiz</a>
+    @endif
 
 
 

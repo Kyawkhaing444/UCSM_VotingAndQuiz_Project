@@ -85,9 +85,12 @@ class ShopitemController extends Controller
      * @param  \App\shopitem  $shopitem
      * @return \Illuminate\Http\Response
      */
-    public function edit(shopitem $shopitem)
+    public function edit($id)
     {
-        //
+       $shop_item = shopitem::find($id);
+       $shop = shop::all();
+       $bool = 'edit';
+       return view('Admin.shopitem.edit',compact('shop_item','shop','bool'));
     }
 
     /**
@@ -97,9 +100,30 @@ class ShopitemController extends Controller
      * @param  \App\shopitem  $shopitem
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, shopitem $shopitem)
+    public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+
+            'name' => 'required',
+            'photoURL' => 'required',
+            'price' => 'required',
+
+             ]);
+
+           $input = $request->all();
+           if($file = $request->file('photoURL')){
+
+               $name = $file->getClientOriginalName();
+               $file->move('images',$name);
+               $input['photoURL'] = $name;
+
+            }
+
+
+
+            shopitem::whereId($id)->first()->update($input);
+
+           return redirect('shop');
     }
 
     /**
@@ -108,8 +132,9 @@ class ShopitemController extends Controller
      * @param  \App\shopitem  $shopitem
      * @return \Illuminate\Http\Response
      */
-    public function destroy(shopitem $shopitem)
+    public function destroy($id)
     {
-        //
+       shopitem::destroy($id);
+       return redirect('shop');
     }
 }

@@ -85,8 +85,8 @@ use App\shop;
                                                 <td><img src="images/{{ $p->photoURL }}" class="rounded-circle z-depth-1" style="width: 50px; height: 45px; margin-top: -10px;"></td>
                                                 <td>
 
-                                                      <a class="btn btn-success waves-effect btn-small" href="magazine/{{ $p->id }}/edit" style="padding: 8px 12px 8px 12px;margin-top: -10px">Live View</a>
-                                                      <a class="btn btn-danger waves-effect btn-small" href="magazine/{{ $p->id }}/delete" style="padding: 8px 12px 8px 12px;margin-top: -10px"><i class="fas fa-times-circle"></i></a>
+                                                      <a class="btn btn-warning waves-effect btn-small" href="participant/{{ $p->id }}/edit" style="padding: 8px 12px 8px 12px;margin-top: -10px">Edit</a>
+                                                      <a class="btn btn-danger waves-effect btn-small" href="participant/{{ $p->id }}/delete" style="padding: 8px 12px 8px 12px;margin-top: -10px"><i class="fas fa-times-circle"></i></a>
                                                       </td>
                                             </tr>
                                               </tbody>

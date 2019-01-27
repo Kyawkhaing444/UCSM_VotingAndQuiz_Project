@@ -16,7 +16,8 @@ class ShopController extends Controller
     public function index()
     {
         $shop = shop::all();
-        return view('Admin.shop.index',compact('shop'));
+        $bool = 'index';
+        return view('Admin.shop.index',compact('shop','bool'));
     }
 
     /**
@@ -85,7 +86,8 @@ class ShopController extends Controller
     public function edit($id)
     {
        $shop = shop::find($id);
-       return view('Admin.shop.edit',compact('shop'));
+       $bool = 'edit';
+       return view('Admin.shop.edit',compact('shop','bool'));
     }
 
     /**
@@ -95,9 +97,30 @@ class ShopController extends Controller
      * @param  \App\shop  $shop
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, shop $shop)
+    public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'name' => 'required',
+            'photoURL' => 'required'
+
+
+         ]);
+
+       $input = $request->all();
+       if($file = $request->file('photoURL')){
+
+           $name = $file->getClientOriginalName();
+           $file->move('images',$name);
+           $input['photoURL'] = $name;
+
+        }
+
+
+
+
+        shop::whereId($id)->first()->update($input);
+
+       return redirect('shop');
     }
 
     /**

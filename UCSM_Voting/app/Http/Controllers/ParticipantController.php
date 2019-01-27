@@ -16,7 +16,8 @@ class ParticipantController extends Controller
     public function index()
     {
         $cata = parti_cata::all();
-        return view('Admin.participant.index',compact('cata'));
+        $bool = 'index';
+        return view('Admin.participant.index',compact('cata','bool'));
     }
 
     /**
@@ -38,7 +39,9 @@ class ParticipantController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-
+           'name' => 'required',
+           'photoURL'=>'required',
+           'shop' => 'required'
 
 
             ]);
@@ -82,9 +85,12 @@ class ParticipantController extends Controller
      * @param  \App\participant  $participant
      * @return \Illuminate\Http\Response
      */
-    public function edit(participant $participant)
+    public function edit($id)
     {
-        //
+        $participant = participant::find($id);
+        $cata = parti_cata::all();
+        $bool = 'edit';
+        return view('Admin.participant.edit', compact('participant','cata','bool'));
     }
 
     /**
@@ -94,9 +100,32 @@ class ParticipantController extends Controller
      * @param  \App\participant  $participant
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, participant $participant)
+    public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'name' => 'required',
+            'photoURL'=>'required',
+            'shop' => 'required'
+
+
+             ]);
+
+           $input = $request->all();
+           if($file = $request->file('photoURL')){
+
+               $name = $file->getClientOriginalName();
+               $file->move('images',$name);
+               $input['photoURL'] = $name;
+
+            }
+
+
+
+
+            participant::whereId($id)->first()->update($input);
+            participant::whereId($id)->update(['cata_id' => $input['shop']]);
+
+           return redirect('participant');
     }
 
     /**
@@ -105,8 +134,9 @@ class ParticipantController extends Controller
      * @param  \App\participant  $participant
      * @return \Illuminate\Http\Response
      */
-    public function destroy(participant $participant)
+    public function destroy($id)
     {
-        //
+        participant::destroy($id);
+        return redirect('participant');
     }
 }
