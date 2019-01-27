@@ -80,9 +80,9 @@ Route::get('Homequiz', function(){
   return view('Home.Quizz',compact('quiz'));
 });
 
-Route::get('Homeviews/{id}', function($id){
+Route::get('Homeviews/{id}/{cata}', function($id,$cata){
     $parti = participant::find($id);
-  return view('Home.views',compact('parti'));
+  return view('Home.views',compact('parti','cata'));
 });
 
 Route::get('Homeshopitem/{id}', function($id){
@@ -92,11 +92,12 @@ Route::get('Homeshopitem/{id}', function($id){
 
 Route::get('selection/{cata}', function($cata){
   $catago = parti_cata::where('name', $cata)->get();
+  $id = 0 ;
   foreach($catago as $c){
     $id = $c->id;
   }
   $parti = participant::where('cata_id',$id)->get();
-  return view('Home.selection',compact('parti'));
+  return view('Home.selection',compact('parti','cata'));
 });
 
 Route::get('gene',function(){

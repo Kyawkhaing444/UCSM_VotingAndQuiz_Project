@@ -20,7 +20,7 @@
 
 <!-- Navbar brand -->
 <a class="navbar-brand " href="../list" style="color:black;"><i class="fas fa-chevron-left"></i></a>
-<h2 class="navbar-brand " href="#" style="color:black;" >Selection</h2>
+<h2 class="navbar-brand " href="#" style="color:black;" >{{$cata}}</h2>
 
 <!-- Collapse button -->
 
@@ -31,7 +31,7 @@
   <!-- Links -->
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link b" href="../home" style="color:black;">Home
+      <a class="nav-link b" href="../" style="color:black;">Home
         <span class="sr-only">(current)</span>
       </a>
     </li>
@@ -64,7 +64,7 @@
           @foreach ($parti as $p)
 
 
-<a href="../Homeviews/{{ $p->id }}" style="color : black;">
+<a href="../Homeviews/{{ $p->id }}/{{$cata}}" style="color : black;">
         <div class="row">
 
             <div class="col-sm-12">

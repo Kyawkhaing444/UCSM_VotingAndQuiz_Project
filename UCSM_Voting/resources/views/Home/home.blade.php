@@ -12,33 +12,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <title>ucsm voting</title>
   </head>
-<<<<<<< HEAD
   <body>
         <section>
-                <div class="container">
-                  <div class="row" style="box-shadow: none;">
-                    <div class="col-md-12 z-depth-1" style="box-shadow:none;">
-                            <img src="images/left-arrow.png" alt="<" style="width:25px;height: 30px;float:left;margin-top: 20px;margin-bottom : 20px;">
-                              <h4 class=" light-color text-center" style="font-family: sans-serif;margin-top: 20px; margin-bottom : 20px;text-algin:center;box-shadow:0px;" >
-                                Quizzes
-
-                              </h4>
-
-                    </div>
-                  </div>
-                </div>
-      </section>
-    <section>
-      <div class="container">
-=======
-  <body >
-  <!---nav bar =================-->
+                <!---nav bar =================-->
 
   <!--Navbar-->
 <nav class="navbar navbar-expand-lg navbar-dark light-color">
 
 <!-- Navbar brand -->
-<a class="navbar-brand " href="#" style="color:black;display:none;"><i class="fas fa-chevron-left"></i></a>
+<a class="navbar-brand " href="" style="color:black;display:none;"><i class="fas fa-chevron-left"></i></a>
 <h2 class="navbar-brand " href="#" style="color:black;" >UCSM Fresher Welcome</h2>
 
 <!-- Collapse button -->
@@ -50,7 +32,7 @@
   <!-- Links -->
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link b" href="home" style="color:black;">Home
+      <a class="nav-link b" href="../public" style="color:black;">Home
         <span class="sr-only">(current)</span>
       </a>
     </li>
@@ -77,12 +59,9 @@
 </nav>
 <!--/.Navbar-->
   <!-- nab bar =================-->
-  <section>
-
-  </section>
-      
-      <div class="container" style="background-color:white;">
->>>>>>> eb9802f369b12490a8d31f296fe48f8c92beb18c
+      </section>
+    <section>
+      <div class="container">
         <!---King & Queen -->
            <div class="row">
 
