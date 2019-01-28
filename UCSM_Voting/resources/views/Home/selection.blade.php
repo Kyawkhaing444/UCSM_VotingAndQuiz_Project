@@ -47,12 +47,12 @@
     </li>
 
     <!-- Dropdown -->
-   
+
 
   </ul>
   <!-- Links -->
 
-  
+
 </div>
 <!-- Collapsible content -->
 
@@ -66,7 +66,7 @@
           @foreach ($parti as $p)
 
 
-<a href="../Homeviews/{{ $p->id }}/{{$cata}}" style="color : black;">
+<a href="../Homeviews/{{ $p->id }}/{{$cata}}/1" style="color : black;">
         <div class="row">
 
             <div class="col-sm-12">

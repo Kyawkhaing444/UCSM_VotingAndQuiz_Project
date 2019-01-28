@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\vote_user;
 use App\participant;
+use Session;
 
 class vote_usersController extends Controller
 {
@@ -36,22 +37,34 @@ class vote_usersController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'code'   => 'required',
-          ]);
+
           $input = $request->all();
-          $request->session()->put('code',$input['code']);
+
           $value = $request->session()->get('cata');
           $id = $request->session()->get('parti_id');
-          if(!vote_user::where('code', $input['code'])->where($value,'=','active')->update([$value => 'notActive'])){
-              return redirect('shop');
+          if($input['code']==""){
+            Session::flash('ErrorMessage','Please , enter your code!');
+            $input['code'] = "1";
+            return redirect('Homeviews/'.$id.'/'.$value.'/'.$input['code']);
+          }
+          else if(!vote_user::where('code','=', $input['code'])->exists()){
+            Session::flash('ErrorMessage','Your code is incorrect');
+            $input['code'] = "1";
+            return redirect('Homeviews/'.$id.'/'.$value.'/'.$input['code']);
+          }
+          else if(!vote_user::where('code', $input['code'])->where($value,'=','active')->update([$value => 'notActive'])){
+            Session::flash('ErrorMessage','You can vote one time.Thank You');
+            $input['code'] = "1";
+            return redirect('Homeviews/'.$id.'/'.$value.'/'.$input['code']);
           }
           $p = participant::find($id);
           $point = (int)$p->point + 1;
           if(!participant::where('id', $id)->update(['point' => $point])){
-            return redirect('/');
+            Session::flash('ErrorMessage','Thank You');
+            return redirect('Homeviews/'.$id.'/'.$value.'/'.$input['code']);
           }
-          return redirect('Homeviews/'.$id.'/'.$value);
+          Session::flash('Success','Thank You');
+          return redirect('Homeviews/'.$id.'/'.$value.'/'.$input['code']);
     }
 
     /**

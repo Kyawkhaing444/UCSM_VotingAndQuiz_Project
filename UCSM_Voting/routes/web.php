@@ -81,10 +81,10 @@ Route::get('Homequiz', function(){
   return view('Home.Quizz',compact('quiz'));
 });
 
-Route::get('Homeviews/{id}/{cata}', function($id,$cata,Request $request){
+Route::get('Homeviews/{id}/{cata}/{code}', function($id,$cata,$code,Request $request){
     $parti = participant::find($id);
     $request->session()->put('parti_id', $parti->id);
-  return view('Home.views',compact('parti','cata','request'));
+  return view('Home.views',compact('parti','cata','request','code'));
 });
 
 Route::get('Homeshopitem/{id}', function($id){
