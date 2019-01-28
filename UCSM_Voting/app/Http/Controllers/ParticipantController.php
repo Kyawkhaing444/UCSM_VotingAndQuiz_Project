@@ -125,6 +125,7 @@ class ParticipantController extends Controller
             participant::whereId($id)->first()->update($input);
             participant::whereId($id)->update(['cata_id' => $input['shop']]);
 
+
            return redirect('participant');
     }
 

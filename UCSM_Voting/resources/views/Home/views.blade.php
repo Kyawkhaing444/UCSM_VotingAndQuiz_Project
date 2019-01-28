@@ -1,3 +1,8 @@
+@php
+   use App\vote_user;
+   use  Illuminate\Http\Request;
+
+@endphp
 <!doctype html>
 <html lang="en">
   <head>
@@ -46,12 +51,12 @@
     </li>
 
     <!-- Dropdown -->
-   
+
 
   </ul>
   <!-- Links -->
 
-  
+
 </div>
 <!-- Collapsible content -->
 
@@ -71,22 +76,86 @@
            <h5 class="description" id="song-name">{{ $parti->title }}</h5>
           @endif
            <h5 class="description">{{ $parti->name }}</h4>
+    @php
+        $code = $request->session()->get('code');
+        $v = vote_user::where('code',$code)->get();
+        $value = $request->session()->get('cata');
+    @endphp
+  @foreach($v as $vs)
+     @if($vs->$value == "active")
 
-            <form>
+            <form method="POST" action="{{ route('vote.submit') }}">
+                    @csrf
                     <div class="col text-center">
                             <div class="md-form text-center" style="width:50%;margin-left:auto;margin-right:auto;">
-                                    <input type="text" id="form1" class="form-control" >
+                                    <input name="code" type="text" id="form1" class="form-control" >
                                     <label for="form1" class="text-center" style="margin-left:35px;" >Enter Code</label>
                              </div>
                      </div>
-            </form>
+
             </div>
             <div class="card-footer" >
 
-                    <button class="btn btn-info btn-sm waves-effect" style="float:right">VOTE</button>
+                    <button type="submit" class="btn btn-info btn-sm waves-effect" style="float:right">VOTE</button>
                     <a href="../../selection/{{$cata}}" class="btn btn-info btn-sm waves-effect" style="float:right">Cancle</a>
 
             </div>
+        </form>
+     @endif
+     @if($vs->$value == "notActive")
+
+
+    <div class="col text-center">
+                    <div class="md-form text-center" style="width:50%;margin-left:auto;margin-right:auto;">
+                           <div class="card-description">Thank You</div>
+                     </div>
+             </div>
+
+    </div>
+    <div class="card-footer" >
+
+            <button type="submit" class="btn btn-info btn-sm waves-effect" style="float:right;disabled">VOTE</button>
+            <a href="../../selection/{{$cata}}" class="btn btn-info btn-sm waves-effect" style="float:right">Cancle</a>
+
+    </div>
+
+     @else
+
+    <div class="col text-center">
+            <div class="md-form text-center" style="width:50%;margin-left:auto;margin-right:auto;">
+                   <div class="card-description">You Cannot Vote</div>
+             </div>
+     </div>
+
+</div>
+<div class="card-footer" >
+
+    <button type="submit" class="btn btn-info btn-sm waves-effect" style="float:right;disabled">VOTE</button>
+    <a href="../../selection/{{$cata}}" class="btn btn-info btn-sm waves-effect" style="float:right">Cancle</a>
+
+</div>
+
+     @endif
+ @endforeach
+@if($code == "")
+ <form method="POST" action="{{ route('vote.submit') }}">
+        @csrf
+        <div class="col text-center">
+                <div class="md-form text-center" style="width:50%;margin-left:auto;margin-right:auto;">
+                        <input name="code" type="text" id="form1" class="form-control" >
+                        <label for="form1" class="text-center" style="margin-left:35px;" >Enter Code</label>
+                 </div>
+         </div>
+
+</div>
+<div class="card-footer" >
+
+        <button type="submit" class="btn btn-info btn-sm waves-effect" style="float:right">VOTE</button>
+        <a href="../../selection/{{$cata}}" class="btn btn-info btn-sm waves-effect" style="float:right">Cancle</a>
+
+</div>
+</form>
+@endif
 
            </div>
              </div>

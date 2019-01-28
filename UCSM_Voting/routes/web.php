@@ -5,6 +5,7 @@ use App\shop;
 use App\shopitem;
 use App\quiz;
 use App\vote_user;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -80,9 +81,10 @@ Route::get('Homequiz', function(){
   return view('Home.Quizz',compact('quiz'));
 });
 
-Route::get('Homeviews/{id}/{cata}', function($id,$cata){
+Route::get('Homeviews/{id}/{cata}', function($id,$cata,Request $request){
     $parti = participant::find($id);
-  return view('Home.views',compact('parti','cata'));
+    $request->session()->put('parti_id', $parti->id);
+  return view('Home.views',compact('parti','cata','request'));
 });
 
 Route::get('Homeshopitem/{id}', function($id){
@@ -90,12 +92,13 @@ Route::get('Homeshopitem/{id}', function($id){
   return view('Home.shopitem',compact('shop_item'));
 });
 
-Route::get('selection/{cata}', function($cata){
+Route::get('selection/{cata}', function($cata,Request $request){
   $catago = parti_cata::where('name', $cata)->get();
   $id = 0 ;
   foreach($catago as $c){
     $id = $c->id;
   }
+  $request->session()->put('cata', $cata);
   $parti = participant::where('cata_id',$id)->get();
   return view('Home.selection',compact('parti','cata'));
 });
@@ -108,3 +111,9 @@ Route::get('gene',function(){
 
    return redirect('list');
 });
+
+
+//Voter
+
+
+Route::post('vote','vote_usersController@store')->name('vote.submit');
