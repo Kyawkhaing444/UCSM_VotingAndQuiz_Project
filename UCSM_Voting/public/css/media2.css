@@ -6,12 +6,14 @@
    
         .card .image{
           
-            height:300px;
+            height:380px;
+           
             background-position: center;
         }
         .card .m{
            
-            height:380px;
+            height:420px;
+           
             margin-top:0px;
             padding-top:0px;
         }
@@ -19,6 +21,9 @@
             width:100px;
             margin-left:65%;
             font-size:18px;
+        }
+        .card .sho{
+            color:black;
         }
  
  }
@@ -79,3 +84,4 @@
     
  }
  
+ }

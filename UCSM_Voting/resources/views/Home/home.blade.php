@@ -14,6 +14,7 @@
   </head>
   <body>
         <section>
+       
                 <!---nav bar =================-->
 
   <!--Navbar-->
@@ -114,7 +115,7 @@
              <div class="col-12">
                 <!--===========stylish===========-->
 
-                <a href="selection/Girl stylish" style="color : black;">
+                <a href="selection/Miss Stylish" style="color : black;">
 
               <div class="card card-right ">
                <img class="card-img-top image" src="css/MDB/q3.png" alt="Card image cap" >
@@ -124,11 +125,11 @@
 
                </div>
             </a>
-            <a href="selection/Boy stylish" style="color : black;">
+            <a href="selection/Mrs Stylish" style="color : black;">
                <div class="card">
                   <img class="card-img-top image" src="css/MDB/k1.png" alt="Card image cap" >
                   <div class="card-footer">
-                   <h5 class="description">Mirs Stylish</h4>
+                   <h5 class="description">Mrs Stylish</h4>
                  </div>
                 </a>
 

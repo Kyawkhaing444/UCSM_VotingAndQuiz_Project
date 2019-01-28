@@ -18,7 +18,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark light-color">
 
 <!-- Navbar brand -->
-<a class="navbar-brand " href="#" style="color:black;"><i class="fas fa-chevron-left"></i></a>
+<a class="navbar-brand " href="list" style="color:black;"><i class="fas fa-chevron-left"></i></a>
 <h2 class="navbar-brand " href="#" style="color:black;" >Quizz</h2>
 
 <!-- Collapse button -->
