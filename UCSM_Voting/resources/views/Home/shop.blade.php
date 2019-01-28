@@ -73,7 +73,7 @@
            <div class="card shop">
               <img class="card-img-top sho" src="images/{{ $s->photoURL }}" alt="Card image cap" >
               <div class="card-footer">
-                  <h5 class="description"> {{ $s->name }}</h4>
+                  <h5 class="description" style="color:black !important;"> {{ $s->name }}</h4>
               </div>
             </div>
           </div>

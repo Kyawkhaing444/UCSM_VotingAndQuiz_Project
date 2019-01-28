@@ -16,6 +16,7 @@
    <!---nav bar =================-->
 
   <!--Navbar-->
+  <section>
 <nav class="navbar navbar-expand-lg navbar-dark light-color">
 
 <!-- Navbar brand -->
@@ -56,6 +57,7 @@
 <!-- Collapsible content -->
 
 </nav>
+</section>
 <!--/.Navbar-->
   <!-- nab bar =================-->
     <section>
