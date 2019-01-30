@@ -5,6 +5,7 @@ use App\shop;
 use App\shopitem;
 use App\quiz;
 use App\vote_user;
+use App\Quiz_user;
 use Illuminate\Http\Request;
 
 /*
@@ -79,7 +80,7 @@ Route::get('Homeshop', function(){
 Route::get('Homequiz', function(){
  $quiz = quiz::all();
   return view('Home.Quizz',compact('quiz'));
-});
+})->middleware('auth:code');
 
 Route::get('Homeviews/{id}/{cata}/{code}', function($id,$cata,$code,Request $request){
     $parti = participant::find($id);
@@ -117,3 +118,26 @@ Route::get('gene',function(){
 
 
 Route::post('vote','vote_usersController@store')->name('vote.submit');
+Route::prefix('code')->group(function() {
+    Route::get('/login', 'Auth\CodeController@showLoginForm')->name('code.login');
+    Route::post('/login', 'Auth\CodeController@login')->name('code.login.submit');
+  });
+
+Route::get('genec',function(){
+
+    for( $i = 1 ; $i <= 25 ; $i++){
+      $str = str_random(8);
+       Quiz_user::create(['password' => bcrypt($str), 'name' => 'TC-'.$i , 'code' => $str]);
+    }
+
+      return redirect('list');
+   });
+
+   Route::get('code/logout',function(){
+    if(Auth::guard('web')->check()) $redirect = 'code/login';
+        else $redirect = '/';
+
+        Auth::guard('code')->logout();
+
+        return redirect($redirect);
+  });
