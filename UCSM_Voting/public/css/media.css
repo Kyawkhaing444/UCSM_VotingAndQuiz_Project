@@ -24,13 +24,16 @@
    }
    .logo .logo-image{
    
-       width:80px;
-       height:80px;
+       width:70px;
+       height:70px;
        border-radius:50%;   ;
        -webkit-border-radius:50%   ;
        -moz-border-radius:50%   ;
        -ms-border-radius:50%   ;
        -o-border-radius:50%   ;
+}
+header{
+    height:450px;
 }
 
  
@@ -56,8 +59,9 @@
        height:200px;
    }
    .logo{
-    
+    border:1px solid black;
    padding-top:20px;
+   float:right;
   }
   .logo .logo-image{
   
@@ -68,6 +72,9 @@
       -moz-border-radius:50%   ;
       -ms-border-radius:50%   ;
       -o-border-radius:50%   ;
+}
+header{
+    height:650px;
 }
 }
 @media only screen and (min-width: 1300px){

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/MDB/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/MDB/css/mdb.css">
     <link rel="stylesheet" href="css/media.css">
+    
     <link rel="stylesheet" href="css/style.css">
     <title>ucsm voting</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -85,7 +86,9 @@ header .intro-text .intro-heading {
     text-decoration:underline;
         margin-top:50px;
       color:transparent;
-
+     
+font-weight:normal;
+font-style:normal;
 
 
 
@@ -97,7 +100,21 @@ header .intro-text .intro-heading {
   
       
   }
-  @import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Lobster|Pacifico');
+  h2 {
+    font-family: 'freebooter_script_-_altsRg';
+font-weight:normal;
+font-style:normal;
+}
+body{
+    font-family: 'freebooter_script_-_altsRg';
+font-weight:normal;
+font-style:normal;
+}
+.f,.nav-link{
+    font-family: 'freebooter_script_-_altsRg';
+font-weight:normal;
+font-style:normal;
+}
    </style>
   </head>
   <body>
@@ -105,8 +122,8 @@ header .intro-text .intro-heading {
 <nav class="navbar navbar-expand-lg navbar-dark light-color">
 
 <!-- Navbar brand -->
-<a class="navbar-brand " href="../Homeshop" style="color:black;">&nbsp;</a>
-<h2 class="navbar-brand" href="#" style="color:black;" >Fresher Welcome</h2>
+<a class="navbar-brand " href="../Homeshop" style="color:black;"><img src="images/logo.png" class="logo-image" style="border-radius:50%;width:50px;height:50px;"></a>
+<h2 class="navbar-brand" href="#" style="color:black;">Fresher Welcome</h2>
 
 <!-- Collapse button -->
 
@@ -117,18 +134,21 @@ header .intro-text .intro-heading {
   <!-- Links -->
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link b" href="#" style="color:black;">Home
+      <a class="nav-link b f" href="#" style="color:black;">Home
         <span class="sr-only">(current)</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link " href="list" style="color:black;">Vote</a>
+      <a class="nav-link f" href="list" style="color:black;">Vote</a>
     </li>
-    <li class="nav-item " >
+    <li class="nav-item f" >
       <a class="nav-link" href="Homeshop" style="color:black;">Shop</a>
     </li>
-    <li class="nav-item ">
+    <li class="nav-item f">
       <a class="nav-link" href="Homequiz" style="color:black;">Quizz</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link" href="http://bit.ly/tcregister" style="color:black;">Register</a>
     </li>
 
     <!-- Dropdown -->
@@ -149,17 +169,9 @@ header .intro-text .intro-heading {
     <header>
 			<div class="container">
 				<div class="slider-container">
-                    <div class="logo" style="padding-left:230px;padding-top:20px;"><img src="images/logo.png" class="logo-image"></div>
-                    <div class="head-section">
-                        <h2>&ensp;</h2>
-                        <h3>&ensp;</h3>
-                      </div>
-					<div class="intro-text">
-                      
-                    <div class="intro-heading"></div>
-                        
+                    
+                   
 					
-					</div>
 				</div>
 			</div>
 		</header>
@@ -177,7 +189,7 @@ header .intro-text .intro-heading {
                         <img class="card-img-top" src="images/vote2.jpg" alt="Card image cap">
                       </div>
                       <div class="card-description text-center">
-                             <h4>Vote</h4> 
+                             <h4 class="f">Vote</h4> 
                           </div>
                           <hr>
                     </div></a>
@@ -189,7 +201,7 @@ header .intro-text .intro-heading {
                         <img class="card-img-top" src="images/shop3.jpg" alt="Card image cap">
                       </div>
                       <div class="card-description text-center">
-                             <h4>Shop</h4> 
+                             <h4 class="f">Shop</h4> 
                           </div>
                           <hr>
                     </div>
@@ -202,7 +214,7 @@ header .intro-text .intro-heading {
                         <img class="card-img-top" src="images/quizz6.svg" alt="Card image cap">
                       </div>
                       <div class="card-description text-center">
-                             <h4>Quizz</h4> 
+                             <h4 class="f">Quizz</h4> 
                           </div>
                           <hr>
                     </div>

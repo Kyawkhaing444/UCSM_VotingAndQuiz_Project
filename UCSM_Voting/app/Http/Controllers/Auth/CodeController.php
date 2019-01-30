@@ -17,7 +17,7 @@ class CodeController extends Controller
 
     public function showLoginForm()
     {
-      Session::flash('Message','If you are first year student , we have plan for you. Go Technology Club counter and get code , thank you !');
+      Session::flash('Message','If you are first year student , we have plan for you.Plz go to Technology Club counter and get the code to log in , thank you !');
       return view('auth.code');
     }
 

@@ -90,7 +90,8 @@ Route::get('Homeviews/{id}/{cata}/{code}', function($id,$cata,$code,Request $req
 
 Route::get('Homeshopitem/{id}', function($id){
   $shop_item = shopitem::where('shop_id', $id)->get();
-  return view('Home.shopitem',compact('shop_item'));
+  $shop = shop::find($id);
+  return view('Home.shopitem',compact('shop_item','shop'));
 });
 
 Route::get('selection/{cata}', function($cata,Request $request){

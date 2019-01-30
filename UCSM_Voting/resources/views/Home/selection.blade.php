@@ -11,7 +11,14 @@
     <link rel="stylesheet" href="../css/MDB/css/mdb.css">
     <link rel="stylesheet" href="../css/media2.css">
     <title>ucsm voting</title>
+    <style>
+     .nav-link,.f,.description{
+    font-weight:normal;
+    font-style:normal;
+  }
+    </style>
   </head>
+  
   <body>
    <!---nav bar =================-->
 
@@ -21,7 +28,7 @@
 
 <!-- Navbar brand -->
 <a class="navbar-brand " href="../list" style="color:black;"><i class="fas fa-chevron-left"></i></a>
-<h2 class="navbar-brand " href="#" style="color:black;" >{{$cata}}</h2>
+<h2 class="navbar-brand f" href="#" style="color:black;" >{{$cata}}</h2>
 
 <!-- Collapse button -->
 
@@ -32,18 +39,24 @@
   <!-- Links -->
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link b" href="../" style="color:black;">Home
+      <a class="nav-link b f" href="../" style="color:black;">Home
         <span class="sr-only">(current)</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link " href="../list" style="color:black;">Vote</a>
+      <a class="nav-link f" href="../list" style="color:black;">Vote</a>
     </li>
     <li class="nav-item " >
-      <a class="nav-link" href="../Homeshop" style="color:black;">Shop</a>
+      <a class="nav-link f" href="../Homeshop" style="color:black;">Shop</a>
     </li>
     <li class="nav-item ">
-      <a class="nav-link" href="../Homequiz" style="color:black;">Quizz</a>
+      <a class="nav-link f" href="../Homequiz" style="color:black;">Quizz</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link" href="http://bit.ly/tcregister" style="color:black;">Quizz</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link" href="http://bit.ly/tcregister" style="color:black;">Register</a>
     </li>
 
     <!-- Dropdown -->

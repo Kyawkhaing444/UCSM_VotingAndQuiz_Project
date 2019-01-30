@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="../css/media2.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <title>ucsm voting</title>
+    <style>
+     .nav-link,.f,.description{
+    font-weight:normal;
+    font-style:normal;
+  }
+    </style>
   </head>
   <body>
   <!---nav bar =================-->
@@ -20,9 +26,9 @@
 
 <!-- Navbar brand -->
 <a class="navbar-brand " href="../Homeshop" style="color:black;"><i class="fas fa-chevron-left"></i></a>
-@foreach ($shop_item as $s)
-<h2 class="navbar-brand " href="#" style="color:black;" >{{ $s->name }}</h2>
-@endforeach
+
+<h2 class="navbar-brand f" href="#" style="color:black;" >{{ $shop->name }}</h2>
+
 
 <!-- Collapse button -->
 
@@ -45,6 +51,9 @@
     </li>
     <li class="nav-item ">
       <a class="nav-link" href="../Homequiz" style="color:black;">Quizz</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link" href="http://bit.ly/tcregister" style="color:black;">Register</a>
     </li>
 
     <!-- Dropdown -->

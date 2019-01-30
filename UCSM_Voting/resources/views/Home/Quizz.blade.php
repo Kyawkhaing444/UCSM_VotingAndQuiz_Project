@@ -10,6 +10,12 @@
     <link rel="stylesheet" href="css/MDB/css/mdb.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <title>ucsm voting</title>
+    <style>
+     .nav-link,.f,.description{
+    font-weight:normal;
+    font-style:normal;
+  }
+    </style>
   </head>
   <body>
    <!---nav bar =================-->
@@ -18,8 +24,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark light-color">
 
 <!-- Navbar brand -->
-<a class="navbar-brand " href="list" style="color:black;"><i class="fas fa-chevron-left"></i></a>
-<h2 class="navbar-brand " href="#" style="color:black;" >Quizz</h2>
+<a class="navbar-brand " href="../public" style="color:black;"><i class="fas fa-chevron-left"></i></a>
+<h2 class="navbar-brand f" href="#" style="color:black;" >Quizz</h2>
 
 <!-- Collapse button -->
 
@@ -42,6 +48,9 @@
     </li>
     <li class="nav-item ">
       <a class="nav-link" href="Homequiz" style="color:black;">Quizz</a>
+    </li>
+    <li class="nav-item ">
+      <a class="nav-link" href="http://bit.ly/tcregister" style="color:black;">Register</a>
     </li>
 
     <!-- Dropdown -->

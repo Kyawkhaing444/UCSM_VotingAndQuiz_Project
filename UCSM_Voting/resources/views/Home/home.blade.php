@@ -9,9 +9,18 @@
     <link rel="stylesheet" href="css/MDB/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/MDB/css/mdb.css">
     <link rel="stylesheet" href="css/media.css">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <title>ucsm voting</title>
+    <style>
+      .f,.description{
+  
+font-weight:normal;
+font-style:normal;
+}
+      </style>
   </head>
+  
   <body>
         <section>
        
@@ -21,8 +30,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark light-color">
 
 <!-- Navbar brand -->
-<a class="navbar-brand " href="" style="color:black;display:none;"><i class="fas fa-chevron-left"></i></a>
-<h2 class="navbar-brand " href="#" style="color:black;" >UCSM Fresher Welcome</h2>
+<a class="navbar-brand " href="../public" style="color:black;"><i class="fas fa-chevron-left"></i></a>
+<h2 class="navbar-brand f " href="#" style="color:black;" >Voting</h2>
 
 <!-- Collapse button -->
 
@@ -33,18 +42,21 @@
   <!-- Links -->
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link b" href="../public" style="color:black;">Home
+      <a class="nav-link b f" href="../public" style="color:black;">Home
         <span class="sr-only">(current)</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link " href="list" style="color:black;">Vote</a>
+      <a class="nav-link f " href="list" style="color:black;">Vote</a>
     </li>
     <li class="nav-item " >
-      <a class="nav-link" href="Homeshop" style="color:black;">Shop</a>
+      <a class="nav-link f" href="Homeshop" style="color:black;">Shop</a>
     </li>
-    <li class="nav-item ">
+    <li class="nav-item f">
       <a class="nav-link" href="Homequiz" style="color:black;">Quizz</a>
+    </li>
+    <li class="nav-item f">
+      <a class="nav-link" href="http://bit.ly/tcregister" style="color:black;">Register</a>
     </li>
 
     <!-- Dropdown -->
