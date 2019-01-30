@@ -17,8 +17,19 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if (Auth::guard($guard)->check()) {
+
+
+        switch($guard){
+           case 'code' :
+           if(Auth::guard($guard)->check()){
+              return redirect('Homequiz');
+           }
+           break;
+           default:
+           if (Auth::guard($guard)->check()) {
             return redirect('dashboard');
+           }
+           break;
         }
 
         return $next($request);

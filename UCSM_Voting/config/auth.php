@@ -45,6 +45,11 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+
+        'code' => [
+            'driver' => 'session',
+            'provider' => 'codes'
+        ],
     ],
 
     /*
@@ -68,6 +73,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+
+        'codes' => [
+            'driver' => 'eloquent',
+            'model' => App\Quiz_user::class,
         ],
 
         // 'users' => [
@@ -94,6 +104,11 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        'codes' => [
+            'provider' => 'codes',
             'table' => 'password_resets',
             'expire' => 60,
         ],

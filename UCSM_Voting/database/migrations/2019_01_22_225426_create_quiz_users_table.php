@@ -16,9 +16,12 @@ class CreateQuizUsersTable extends Migration
         Schema::create('quiz_users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name')->default("");
-            $table->string('code')->default("");
+            $table->string('sec_name')->default("");
+            $table->string('password')->default("");
             $table->integer('Quiz_id')->default(0);
             $table->integer('point')->default(0);
+            $table->string('code')->default("");
+            $table->rememberToken();
             $table->timestamps();
         });
     }

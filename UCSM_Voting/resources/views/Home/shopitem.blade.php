@@ -20,7 +20,9 @@
 
 <!-- Navbar brand -->
 <a class="navbar-brand " href="../Homeshop" style="color:black;"><i class="fas fa-chevron-left"></i></a>
-<h2 class="navbar-brand " href="#" style="color:black;" >Shop Name's Items</h2>
+@foreach ($shop_item as $s)
+<h2 class="navbar-brand " href="#" style="color:black;" >{{ $s->name }}</h2>
+@endforeach
 
 <!-- Collapse button -->
 
@@ -46,12 +48,12 @@
     </li>
 
     <!-- Dropdown -->
-   
+
 
   </ul>
   <!-- Links -->
 
-  
+
 </div>
 <!-- Collapsible content -->
 
@@ -70,7 +72,7 @@
                 <div class="col-sm-12">
                <div class="card shop" style="margin-top:20px;">
                     <div class="amount">
-                            1000 Kyats
+                            {{$s->price}} Kyats
                         </div>
                   <img class="card-img-top im" src="../images/{{ $s->photoURL }}" alt="Card image cap" >
                   <div class="card-footer">
@@ -82,7 +84,7 @@
          @endforeach
 
 
-            </div>
+
 
                 <!---King & Queen -->
 
