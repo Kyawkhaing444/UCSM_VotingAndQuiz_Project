@@ -24,7 +24,9 @@ Route::get('/', function () {
 });
 
 Route::get('dashboard', function(){
-   return view('Admin.dashboard.index');
+   $parti = participant::all();
+   $parti_cata = parti_cata::all();
+   return view('Admin.dashboard.index',compact('parti','parti_cata'));
 })->middleware('auth');
 Route::resource('participant','ParticipantController')->middleware('auth');
 
@@ -48,6 +50,8 @@ Route::get('shop_item/{event}/delete','ShopitemController@destroy')->middleware(
 Route::resource('quiz', 'QuizController')->middleware('auth');
 
 Route::resource('shop_item', 'ShopitemController')->middleware('auth');
+Route::resource('QuizUser', 'QuizUserController')->middleware('auth:code');
+
 
 
 
