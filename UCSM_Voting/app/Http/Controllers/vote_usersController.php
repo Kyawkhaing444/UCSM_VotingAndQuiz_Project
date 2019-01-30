@@ -43,27 +43,27 @@ class vote_usersController extends Controller
           $value = $request->session()->get('cata');
           $id = $request->session()->get('parti_id');
           if($input['code']==""){
-            Session::flash('ErrorMessage','Please , enter your code!');
+            Session::flash('ErrorMessage','Please , enter your code!If there\'s any problem, Plz Contact Technology Club\'s Counter,Thank You!');
             $input['code'] = "1";
             return redirect('Homeviews/'.$id.'/'.$value.'/'.$input['code']);
           }
           else if(!vote_user::where('code','=', $input['code'])->exists()){
-            Session::flash('ErrorMessage','Your code is incorrect');
+            Session::flash('ErrorMessage','Your code is incorrect! If there\'s any problem, Plz Contact Technology Club\'s Counter,Thank You!');
             $input['code'] = "1";
             return redirect('Homeviews/'.$id.'/'.$value.'/'.$input['code']);
           }
           else if(!vote_user::where('code', $input['code'])->where($value,'=','active')->update([$value => 'notActive'])){
-            Session::flash('ErrorMessage','You can vote one time.Thank You');
+            Session::flash('ErrorMessage',"You can only vote one time.If there\'s any problem, Plz Contact Technology Club\'s Counter,Thank You!");
             $input['code'] = "1";
             return redirect('Homeviews/'.$id.'/'.$value.'/'.$input['code']);
           }
           $p = participant::find($id);
           $point = (int)$p->point + 1;
           if(!participant::where('id', $id)->update(['point' => $point])){
-            Session::flash('ErrorMessage','Thank You');
+            Session::flash('ErrorMessage','Thank You!');
             return redirect('Homeviews/'.$id.'/'.$value.'/'.$input['code']);
           }
-          Session::flash('Success','Thank You');
+          Session::flash('Success','Thank You!');
           return redirect('Homeviews/'.$id.'/'.$value.'/'.$input['code']);
     }
 
