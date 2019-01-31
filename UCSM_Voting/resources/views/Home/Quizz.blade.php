@@ -85,6 +85,10 @@
 
     <section>
         <div class="container">
+        <div class="row">
+       
+        </div>
+       
                 {!! Form::open(['method'=>'POST','action'=>'QuizUserController@store','files'=>true]) !!}
        @foreach ($quiz as $q)
 

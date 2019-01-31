@@ -18,6 +18,7 @@
 font-weight:normal;
 font-style:normal;
 }
+
       </style>
   </head>
   
@@ -42,7 +43,7 @@ font-style:normal;
   <!-- Links -->
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link b f" href="../public" style="color:black;">Home
+      <a class="nav-link b f" href="../public/Home" style="color:black;">Home
         <span class="sr-only">(current)</span>
       </a>
     </li>
@@ -95,6 +96,29 @@ font-style:normal;
               <img class="card-img-top image" src="css/MDB/k3.png" alt="Card image cap" >
               <div class="card-footer">
                <h5 class="description">Fresher King</h4>
+             </div>
+
+             </div>
+            </a>
+             </div>
+             
+             <div class="col-12">
+          <a href="selection/Princess" style="color : black;">
+
+            <div class="card card-right ">
+             <img class="card-img-top image" src="css/MDB/q1.png" alt="Card image cap" >
+            <div class="card-footer">
+             <h5 class="description">Princess</h4>
+             </div>
+
+
+            </div>
+        </a>
+                    <a href="selection/Prince" style="color : black;">
+           <div class="card">
+              <img class="card-img-top image" src="css/MDB/k3.png" alt="Card image cap" >
+              <div class="card-footer">
+               <h5 class="description">Prince</h4>
              </div>
 
              </div>

@@ -26,7 +26,7 @@
 
 <!-- Navbar brand -->
 <a class="navbar-brand " href="../public" style="color:black;"><i class="fas fa-chevron-left"></i></a>
-<h2 class="navbar-brand f" href="#" style="color:black;" >Quizz</h2>
+<h2 class="navbar-brand f" href="#" style="color:black;" >Shop</h2>
 
 <!-- Collapse button -->
 
@@ -37,7 +37,7 @@
   <!-- Links -->
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link b" href="../public" style="color:black;">Home
+      <a class="nav-link b" href="../public/Home" style="color:black;">Home
         <span class="sr-only">(current)</span>
       </a>
     </li>

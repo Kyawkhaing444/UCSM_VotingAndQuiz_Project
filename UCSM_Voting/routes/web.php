@@ -20,12 +20,17 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('Home.realhome');
+    return view('Home.preloader');
+});
+
+Route::get('/Home' ,function(){
+   return view('Home.realhome');
 });
 
 Route::get('dashboard', function(){
    $parti = participant::all();
    $parti_cata = parti_cata::all();
+   $Qu = Quiz_user::all();
    return view('Admin.dashboard.index',compact('parti','parti_cata'));
 })->middleware('auth');
 Route::resource('participant','ParticipantController')->middleware('auth');
@@ -110,7 +115,7 @@ Route::get('selection/{cata}', function($cata,Request $request){
 });
 
 Route::get('gene',function(){
- for($i = 0 ; $i < 500 ; $i++){
+ for($i = 0 ; $i < 520 ; $i++){
     $str = str_random(8);
     vote_user::create(['code' => $str]);
  }
@@ -130,7 +135,7 @@ Route::prefix('code')->group(function() {
 
 Route::get('genec',function(){
 
-    for( $i = 1 ; $i <= 25 ; $i++){
+    for( $i = 1 ; $i <= 50 ; $i++){
       $str = str_random(8);
        Quiz_user::create(['password' => bcrypt($str), 'name' => 'TC-'.$i , 'code' => $str]);
     }
