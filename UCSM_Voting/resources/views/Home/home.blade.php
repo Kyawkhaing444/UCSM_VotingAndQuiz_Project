@@ -101,6 +101,29 @@ font-style:normal;
              </div>
             </a>
              </div>
+             
+             <div class="col-12">
+          <a href="selection/Princess" style="color : black;">
+
+            <div class="card card-right ">
+             <img class="card-img-top image" src="css/MDB/q1.png" alt="Card image cap" >
+            <div class="card-footer">
+             <h5 class="description">Princess</h4>
+             </div>
+
+
+            </div>
+        </a>
+                    <a href="selection/Prince" style="color : black;">
+           <div class="card">
+              <img class="card-img-top image" src="css/MDB/k3.png" alt="Card image cap" >
+              <div class="card-footer">
+               <h5 class="description">Prince</h4>
+             </div>
+
+             </div>
+            </a>
+             </div>
                <div class="col-12">
                  <!--===========Whole King & Queen-->
 
