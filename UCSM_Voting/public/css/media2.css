@@ -1,0 +1,87 @@
+@media only screen and (max-width: 480px) and (min-width: 250px){
+    .card{
+        margin-top:10px;
+    }
+    
+   
+        .card .image{
+          
+            height:380px;
+           
+            background-position: center;
+        }
+        .card .m{
+           
+            height:420px;
+           
+            margin-top:0px;
+            padding-top:0px;
+        }
+        .card .amount{
+            width:100px;
+            margin-left:65%;
+            font-size:18px;
+        }
+        .card .sho{
+            color:black;
+        }
+ 
+ }
+
+ @media only screen and (min-width: 600px){
+   .card{
+       margin-top:10px;
+   }
+   .card .image{
+       height:600px;
+       background-position:center;
+   }
+   .card .m{
+       padding-top:0px;
+       margin-top:0px;
+       height:720px;
+   }
+   .card .amount{
+       
+       margin-left:79%;
+       font-size:20px;
+       width:120px;
+   }
+ 
+ }
+ @media only screen and (min-width: 1300px){
+    .card{
+        margin-top:10px;
+        width:30%;
+        margin-left:auto;
+        margin-right: auto;
+    }
+    .card .image{
+        height:300px;
+        background-position:center;
+    }
+    .card .m{
+        padding-top:0px;
+        margin-top:0px;
+        height:300px;
+       
+        width:100%;
+    }
+    .card .amount{
+        
+        margin-left:79%;
+        font-size:20px;
+        width:120px;
+    }
+    .nav{
+      
+    }
+    .card .amount{
+       
+        margin-left:65%;
+        font-size:20px;
+        width:120px;
+    
+ }
+ 
+ }
