@@ -39,7 +39,7 @@
   <!-- Links -->
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link b" href="../" style="color:black;">Home
+      <a class="nav-link b" href="../Home" style="color:black;">Home
         <span class="sr-only">(current)</span>
       </a>
     </li>

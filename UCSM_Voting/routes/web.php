@@ -20,12 +20,17 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('Home.realhome');
+    return view('Home.preloader');
+});
+
+Route::get('/Home' ,function(){
+   return view('Home.realhome');
 });
 
 Route::get('dashboard', function(){
    $parti = participant::all();
    $parti_cata = parti_cata::all();
+   $Qu = Quiz_user::all();
    return view('Admin.dashboard.index',compact('parti','parti_cata'));
 })->middleware('auth');
 Route::resource('participant','ParticipantController')->middleware('auth');
