@@ -47,17 +47,17 @@ class QuizUserController extends Controller
 
 
        foreach ($quiz as $q) {
-            try{
-               if($input[$q->answer] = $q->answer){
+           if(isset($input[ str_replace(' ','',$q->item1) ])){
+               if($input[ str_replace(' ','',$q->item1) ] == $q->answer){
                   $p++;
                }
-            }catch (Exception $e) {
-
             }
+
        }
       $name = $request->session()->get('name');
 
       Quiz_user::where('name','=', $name)->update(['point' => $p]);
+      Quiz_user::where('name','=', $name)->update(['quiz_id' => 1]);
 
 
       $request->session()->put('quizmessage', 'hello');

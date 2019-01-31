@@ -14,17 +14,17 @@
     <title>ucsm voting</title>
     <style>
       .f,.description{
-  
+
 font-weight:normal;
 font-style:normal;
 }
 
       </style>
   </head>
-  
+
   <body>
         <section>
-       
+
                 <!---nav bar =================-->
 
   <!--Navbar-->
@@ -61,12 +61,12 @@ font-style:normal;
     </li>
 
     <!-- Dropdown -->
-   
+
 
   </ul>
   <!-- Links -->
 
-  
+
 </div>
 <!-- Collapsible content -->
 
@@ -101,7 +101,7 @@ font-style:normal;
              </div>
             </a>
              </div>
-             
+
              <div class="col-12">
           <a href="selection/Princess" style="color : black;">
 
@@ -151,21 +151,21 @@ font-style:normal;
              <div class="col-12">
                 <!--===========stylish===========-->
 
-                <a href="selection/Miss Stylish" style="color : black;">
+                <a href="selection/Miss Stylist" style="color : black;">
 
               <div class="card card-right ">
                <img class="card-img-top image" src="css/MDB/q3.png" alt="Card image cap" >
                <div class="card-footer">
-                 <h5 class="description">Miss Stylish</h4>
+                 <h5 class="description">Miss Stylist</h4>
                 </div>
 
                </div>
             </a>
-            <a href="selection/Mrs Stylish" style="color : black;">
+            <a href="selection/Mister Stylist" style="color : black;">
                <div class="card">
                   <img class="card-img-top image" src="css/MDB/k1.png" alt="Card image cap" >
                   <div class="card-footer">
-                   <h5 class="description">Mrs Stylish</h4>
+                   <h5 class="description">Mister Stylist</h4>
                  </div>
                 </a>
 

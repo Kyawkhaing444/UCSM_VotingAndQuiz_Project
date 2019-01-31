@@ -115,7 +115,7 @@ Route::get('selection/{cata}', function($cata,Request $request){
 });
 
 Route::get('gene',function(){
- for($i = 0 ; $i < 500 ; $i++){
+ for($i = 0 ; $i < 520 ; $i++){
     $str = str_random(8);
     vote_user::create(['code' => $str]);
  }
@@ -135,7 +135,7 @@ Route::prefix('code')->group(function() {
 
 Route::get('genec',function(){
 
-    for( $i = 1 ; $i <= 25 ; $i++){
+    for( $i = 1 ; $i <= 50 ; $i++){
       $str = str_random(8);
        Quiz_user::create(['password' => bcrypt($str), 'name' => 'TC-'.$i , 'code' => $str]);
     }
