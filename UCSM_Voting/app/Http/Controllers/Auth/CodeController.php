@@ -37,6 +37,9 @@ class CodeController extends Controller
 
             Quiz_user::where('name','=',$request->name)->update(['sec_name' => $request->name_c]);
 
+            $request->session()->put('name', $request->name);
+
+
             return redirect('Homequiz');
 
 

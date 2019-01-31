@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Quiz_user;
 use Illuminate\Http\Request;
+use App\quiz;
+use Session;
 
 class QuizUserController extends Controller
 {
@@ -35,7 +37,33 @@ class QuizUserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+       $input = $request->all();
+
+       $quiz = quiz::all();
+
+       $p = 0;
+       $m = "";
+
+
+       foreach ($quiz as $q) {
+            try{
+               if($input[$q->answer] = $q->answer){
+                  $p++;
+               }
+            }catch (Exception $e) {
+
+            }
+       }
+      $name = $request->session()->get('name');
+
+      Quiz_user::where('name','=', $name)->update(['point' => $p]);
+
+
+      $request->session()->put('quizmessage', 'hello');
+
+
+       return redirect('Homequiz');
     }
 
     /**
