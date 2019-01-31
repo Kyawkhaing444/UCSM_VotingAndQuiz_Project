@@ -88,7 +88,7 @@ Route::get('Homeshop', function(){
 
 Route::get('Homequiz', function(){
  $quiz = quiz::all();
-  return view('Home.Quizz',compact('quiz'));
+  return view('Home.Quizzes',compact('quiz'));
 })->middleware('auth:code');
 
 Route::get('Homeviews/{id}/{cata}/{code}', function($id,$cata,$code,Request $request){
