@@ -1,3 +1,7 @@
+@php
+  use App\Quiz_user;
+  use Illuminate\Http\Request;
+@endphp
 <!doctype html>
 <html lang="en">
   <head>
@@ -15,6 +19,36 @@
     font-weight:normal;
     font-style:normal;
   }
+  #cl{
+    margin-top:200px;
+  }
+
+@media only screen and (max-width: 480px) and (min-width: 250px){
+  #cl{
+    margin-top:150px;
+  }   
+  #bt{
+    margin-top:150px;
+  }
+}
+@media only screen and  (min-width: 600px){
+   
+  #cl{
+    margin-top:230px;
+  }
+  #bt{
+    margin-top:230px;
+  }
+}
+@media only screen and  (min-width: 600px){
+  #cl{
+    margin-top:200px;
+  }
+  #bt{
+    margin-top:200px;
+  }
+}
+  
     </style>
   </head>
   <body>
@@ -25,7 +59,7 @@
 
 <!-- Navbar brand -->
 <a class="navbar-brand " href="../public" style="color:black;"><i class="fas fa-chevron-left"></i></a>
-<h2 class="navbar-brand f" href="#" style="color:black;" >Quizz</h2>
+<h2 class=" f" id="countdowntimer" style="color:black;" >Quizz</h2>
 
 <!-- Collapse button -->
 
@@ -50,7 +84,7 @@
       <a class="nav-link" href="Homequiz" style="color:black;">Quizz</a>
     </li>
     <li class="nav-item ">
-      <a class="nav-link" href="http://bit.ly/tcregister" style="color:black;">Register</a>
+      <a class="nav-link" href="http://bit.ly/tclubregister" style="color:black;">Register</a>
     </li>
 
     <!-- Dropdown -->
@@ -61,39 +95,74 @@
 
 
 </div>
-<!-- Collapsible content -->
 
 </nav>
 <!--/.Navbar-->
   <!-- nab bar =================-->
-  @if(Session::has('quizmessage'))
+  @php 
+  $request = request();
+  $pzea = 0;
+  $pz = Quiz_user::where('name',$request->session()->get('name')->get);
+  foreach($pz as $pze)
+    $pzea = $pze->Quiz_id;
+  @endphp
 
+  
+  @if(!Session::has('quizmessage') && $pzea != 1)
+  <div class="container" id="cl">
+    <div class="row">
+          <div style="margin-left:auto;margin-right:auto;" class="text-center">
+                 
+                
+               <div class="card-description">
+               You Have 15 minutes for this quiz
+               </div>
+               
+              <button class="btn btn-primary " id="start" >Start Quizz</div>
+          </div>
+    </div>
+  </div>
+  @endif
+  @if(Session::has('quizmessage') && $pzea == 1)
+  
   <div class="container con">
         <div class="row">
             <div class="col-sm-12">
-               <div class="card" style="width:100%;height:100px;vertical-align: center;">
+               <div class="card-body" style="width:100%;height:100px;vertical-align: center;" id="bg">
                       <h1 class="card-description text-center">
                               Thank You!
                       </h1>
-                      <a href="http://bit.ly/tcregister"><h3>Register as Technology Club Memeber?</h3></a>
+                      <a href="http://bit.ly/tcregister"><h6 class="text-center">Register as Technology Club Memeber?</h6></a>
                </div>
             </div>
         </div>
-    </div>
+  </div>
+
+  @elseif(Session::has('TimeMessage'))
+  <div class="container con">
+        <div class="row">
+            <div class="col-sm-12">
+               <div class="card-body" style="width:100%;height:100px;vertical-align: center;" id="bg">
+                      <h1 class="card-description text-center">
+                              Thank Up!
+                      </h1>
+                      <a href="http://bit.ly/tcclubregister"><h6 class="text-center">Register as Technology Club Memeber?</h6></a>
+               </div>
+            </div>
+        </div>
+  </div>
 
   @else
 
     <section>
-        <div class="container">
-        <div class="row">
+        <div class="container" id="hello">
        
-        </div>
        
                 {!! Form::open(['method'=>'POST','action'=>'QuizUserController@store','files'=>true]) !!}
        @foreach ($quiz as $q)
 
-
-            <div class="row">
+           
+            <div class="row" >
                 <div class="col-sm-12">
 
                     <div class="card" style="margin-top:10px;">
@@ -131,8 +200,8 @@
             @endforeach
             <!--==============submit Section==========-->
             <div class="row">
-                <div class="col-sm-12"><br>
-                    <button type="submit" class="btn btn-info btn-block waves-effect">Submit</button>
+                <div class="col-sm-12" id="submit-btn"><br>
+                    <button type="submit" class="btn btn-info btn-block waves-effect" id="submit-btn">Submit</button>
                 </div>
             </div>
             {!! Form::close() !!}
@@ -140,7 +209,41 @@
         </div>
     </section>
     @endif
+    <script>
+ 
 
+    
+
+    
+    document.getElementById('hello').hidden = true;
+      document.getElementById('cl').hidden= false;
+      document.getElementById('start').onclick = function(){
+        document.getElementById('cl').hidden= true;
+        document.getElementById('hello').hidden = false;
+    
+        var timeleft = 60;
+        var secondleft= 60;
+
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    secondleft--;
+    
+    document.getElementById("countdowntimer").textContent =  Math.floor(timeleft / 60) + ":"+secondleft+" "+" minutes left";
+    if(timeleft <= 0 && secondleft <=0 ){
+      clearInterval(downloadTimer);
+       @php
+         Session::flash('TimeMessage','Timeup');
+       @endphp
+        window.location = "Homequiz";
+    }
+       
+    },1000);
+      
+      
+      };
+     
+      
+    </script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

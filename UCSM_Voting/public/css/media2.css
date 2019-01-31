@@ -73,9 +73,7 @@
         font-size:20px;
         width:120px;
     }
-    .nav{
-      
-    }
+   
     .card .amount{
        
         margin-left:65%;
@@ -83,5 +81,18 @@
         width:120px;
     
  }
+ #basicExampleNav{
+    
+    padding-left:100px;
+    font-size:25px;
+    font-weight: 100;
+  }
+  #title{
+   
+    font-size:25px;
+   
+    font-family: sans-serif;
+    padding-left:20px;
+  }
  
  }
