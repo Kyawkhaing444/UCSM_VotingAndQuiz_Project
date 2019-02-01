@@ -36,8 +36,23 @@ header .intro-text {
     padding-top: 150px;
     padding-bottom: 50px;
 }
+.title{
+    font-weight:normal;
+    font-style:normal;
+}
+@media only screen and (min-width: 240px){
+    .title{
+        font-size:16px;
+        font-weight: normal;
+        font-style:normal;
+    }
+    .logo-image{
+        width:40px;
+        height:40px;
+    }
+}
 
-@media (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 	header .intro-text {
 	    padding-top: 80px;
 	    padding-bottom: 200px;
@@ -122,8 +137,8 @@ font-style:normal;
 <nav class="navbar navbar-expand-lg navbar-dark light-color">
 
 <!-- Navbar brand -->
-<a class="navbar-brand " href="../Homeshop" style="color:black;"><img src="images/logo.png" class="logo-image" style="border-radius:50%;width:50px;height:50px;"></a>
-<h2 class="navbar-brand" href="#" style="color:black;">Fresher Welcome</h2>
+<a class="navbar-brand " href="../Homeshop" style="color:black;"><img src="images/logo.png" class="logo-image" ></a>
+<h2 class="navbar-brand title" href="#"  style="color:black;">Fresher Welcome</h2>
 
 <!-- Collapse button -->
 
