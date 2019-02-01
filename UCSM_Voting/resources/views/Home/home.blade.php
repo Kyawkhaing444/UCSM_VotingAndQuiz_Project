@@ -31,7 +31,7 @@ font-style:normal;
 <nav class="navbar navbar-expand-lg navbar-dark light-color">
 
 <!-- Navbar brand -->
-<a class="navbar-brand " href="../public" style="color:black;"><i class="fas fa-chevron-left"></i></a>
+<a class="navbar-brand " href="../Home" style="color:black;"><i class="fas fa-chevron-left"></i></a>
 <h2 class="navbar-brand f " href="#" style="color:black;" >Voting</h2>
 
 <!-- Collapse button -->
@@ -43,7 +43,7 @@ font-style:normal;
   <!-- Links -->
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link b f" href="../public/Home" style="color:black;">Home
+      <a class="nav-link b f" href="../Home" style="color:black;">Home
         <span class="sr-only">(current)</span>
       </a>
     </li>

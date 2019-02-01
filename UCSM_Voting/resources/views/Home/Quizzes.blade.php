@@ -67,7 +67,7 @@ use Illuminate\Http\Request;
 <nav class="navbar navbar-expand-lg navbar-dark light-color">
 
 <!-- Navbar brand -->
-<a class="navbar-brand " href="../public" style="color:black;"><i class="fas fa-chevron-left"></i></a>
+<a class="navbar-brand " href="../" style="color:black;"><i class="fas fa-chevron-left"></i></a>
 <h2 class="navbar-brand f" id="countdowntimer" style="color:black;" >Quizz</h2>
 
 <!-- Collapse button -->
@@ -79,7 +79,7 @@ use Illuminate\Http\Request;
   <!-- Links -->
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link b" href="../public/Home" style="color:black;">Home
+      <a class="nav-link b" href="../Home" style="color:black;">Home
         <span class="sr-only">(current)</span>
       </a>
     </li>
