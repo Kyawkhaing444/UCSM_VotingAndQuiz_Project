@@ -47,11 +47,11 @@ class QuizUserController extends Controller
 
 
        foreach ($quiz as $q) {
+           if(isset($input[ str_replace(' ','',$q->item1) ])){
                if($input[ str_replace(' ','',$q->item1) ] == $q->answer){
                   $p++;
                }
-               $request->session()->flash('qp', $input[ str_replace(' ','',$q->item1) ]);
-               $request->session()->flash('qp1', $q->answer);
+            }
 
        }
       $name = $request->session()->get('name');
