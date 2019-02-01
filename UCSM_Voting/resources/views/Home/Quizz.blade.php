@@ -16,11 +16,40 @@ use Illuminate\Http\Request;
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <title>ucsm voting</title>
     <style>
-     .nav-link,.f,.description{
-    font-weight:normal;
-    font-style:normal;
-  }
-    </style>
+            .nav-link,.f,.description{
+                font-weight:normal;
+                font-style:normal;
+              }
+              #cl{
+                margin-top:200px;
+              }
+
+            @media only screen and (max-width: 480px) and (min-width: 250px){
+              #cl{
+                margin-top:150px;
+              }
+              #bt{
+                margin-top:150px;
+              }
+            }
+            @media only screen and  (min-width: 600px){
+
+              #cl{
+                margin-top:230px;
+              }
+              #bt{
+                margin-top:230px;
+              }
+            }
+            @media only screen and  (min-width: 600px){
+              #cl{
+                margin-top:200px;
+              }
+              #bt{
+                margin-top:200px;
+              }
+            }
+               </style>
   </head>
   <body>
    <!---nav bar =================-->
@@ -30,7 +59,7 @@ use Illuminate\Http\Request;
 
 <!-- Navbar brand -->
 <a class="navbar-brand " href="../public" style="color:black;"><i class="fas fa-chevron-left"></i></a>
-<h2 class="navbar-brand f" href="#" style="color:black;" >Quizz</h2>
+<h2 class="navbar-brand f" id="countdowntimer" style="color:black;" >Quizz</h2>
 
 <!-- Collapse button -->
 
@@ -71,6 +100,37 @@ use Illuminate\Http\Request;
 </nav>
 <!--/.Navbar-->
   <!-- nab bar =================-->
+@if(!Session::has('TimeMessage'))
+  <div class="container" id="cl">
+        <div class="row">
+              <div style="margin-left:auto;margin-right:auto;" class="text-center">
+
+
+                   <div class="card-description">
+                   You Have 15 minutes for this quiz
+                   </div>
+
+                  <button class="btn btn-primary " id="start" >Start Quizz</div>
+              </div>
+        </div>
+      </div>
+      @else
+
+      <div class="container con">
+            <div class="row">
+                <div class="col-sm-12">
+                   <div class="card" style="width:100%;height:100px;vertical-align: center;">
+                          <h1 class="card-description text-center">
+                                  Time up!
+                          </h1>
+                          <a href="http://bit.ly/tcregister"><h3>Register as Technology Club Memeber?</h3></a>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+
+@endif
 
   @php
   $request = request();
@@ -117,7 +177,7 @@ use Illuminate\Http\Request;
   @else
 
     <section>
-        <div class="container">
+        <div class="container" id="hello">
                 {!! Form::open(['method'=>'POST','action'=>'QuizUserController@store','files'=>true]) !!}
        @foreach ($quiz as $q)
 
@@ -161,7 +221,7 @@ use Illuminate\Http\Request;
             <!--==============submit Section==========-->
             <div class="row">
                 <div class="col-sm-12"><br>
-                    <button type="submit" class="btn btn-info btn-block waves-effect">Submit</button>
+                    <button type="submit" class="btn btn-info btn-block waves-effect" id="submit-btn">Submit</button>
                 </div>
             </div>
             {!! Form::close() !!}
@@ -171,6 +231,41 @@ use Illuminate\Http\Request;
     @endif
 
 
+    <script>
+
+
+
+
+
+    document.getElementById('hello').hidden = true;
+      document.getElementById('cl').hidden= false;
+      document.getElementById('start').onclick = function(){
+        document.getElementById('cl').hidden= true;
+        document.getElementById('hello').hidden = false;
+
+        var timeleft = 60;
+        var secondleft= 60;
+
+    var downloadTimer = setInterval(function(){
+    timeleft--;
+    secondleft--;
+
+    document.getElementById("countdowntimer").textContent =  Math.floor(timeleft / 60) + ":"+secondleft+" "+" minutes left";
+    if(timeleft <= 0 && secondleft <=0 ){
+      clearInterval(downloadTimer);
+       @php
+         Session::flash('TimeMessage','Timeup');
+       @endphp
+        window.location = "Homequiz";
+    }
+
+    },1000);
+
+
+      };
+
+
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="css/MDB/js/jquery-3.3.1.min.js"></script>
