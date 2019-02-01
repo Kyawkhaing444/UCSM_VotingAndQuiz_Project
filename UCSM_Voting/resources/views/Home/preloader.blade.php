@@ -6,7 +6,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/MDB/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/MDB/css/mdb.css">
-    <link rel="stylesheet" href="css/media.css">
+   
     
     <link rel="stylesheet" href="css/style.css">
     <title>ucsm voting</title>
@@ -17,12 +17,62 @@
 .pre{
 margin-left:auto;
 margin-right:auto;
+margin-top:150px;
+
+}
+.images{
+    margin-left:auto;
+    margin-right:auto;
+ 
+    width:200px;
+    height:200px;
+   
+
 }
 @media only screen and (max-width: 480px) and (min-width: 250px){
-    .card{
-        margin-top:160px;
-    }
+        .images{
+            margin-top:100px;
+        }
+        .logo{
+            border-radius:50%;width:180px;height:180px;padding-left:30px;
+        }
+
 }
+@media only screen and  (min-width: 600px){
+    .images{
+            margin-top:300px;
+            width:300px;
+            height:300px;
+            
+        }
+        .logo{
+            border-radius:50%;width:250px;height:250px;padding-left:30px;
+          
+        }
+        .load{
+            height:50px;
+            width:200px;
+        }
+
+}
+@media only screen and  (min-width: 600px){
+    .images{
+            margin-top:100px;
+            width:300px;
+            height:300px;
+            
+        }
+        .logo{
+            border-radius:50%;width:250px;height:250px;padding-left:30px;
+          
+        }
+        .load{
+            height:50px;
+            width:200px;
+        }
+
+}
+
 </style>
 </head>
 <body onload="myFunction()" style="margin:0;">
@@ -31,13 +81,16 @@ margin-right:auto;
     <div id="loader-container">
         
     <div class="row">
-        <div class="col-sm-12 ">
-            <div class="card pre">
-                <div class="card-body">
-                    <img src="images/logo.png" style="border-radius:50%;widht:150px;height:150px;margin-left:auto;margin-right:auto;">
+        <div class="col-md-12" >
+                <div class="images">
+                <img src="images/logo.png"  class="logo" ><br>
+                <img src="images/30(1).gif" class="load" style="padding-left:10px;padding-top:10px;">
                 </div>
-            </div>
+        
         </div>
+                    
+              
+      
     </div>
      
     </div>
