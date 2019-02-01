@@ -115,7 +115,7 @@ Route::get('selection/{cata}', function($cata,Request $request){
 });
 
 Route::get('gene',function(){
- for($i = 0 ; $i < 520 ; $i++){
+ for($i = 0 ; $i < 60 ; $i++){
     $str = str_random(8);
     vote_user::create(['code' => $str]);
  }

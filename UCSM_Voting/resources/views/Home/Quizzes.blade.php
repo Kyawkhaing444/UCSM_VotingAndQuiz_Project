@@ -171,8 +171,9 @@ use Illuminate\Http\Request;
   </div>
 
     @endif
-
-
+@php
+$i = 1;
+@endphp
     <section>
         <div class="container" id="hello">
                 {!! Form::open(['method'=>'POST','action'=>'QuizUserController@store','files'=>true]) !!}
@@ -184,7 +185,7 @@ use Illuminate\Http\Request;
 
                     <div class="card" style="margin-top:10px;">
                                 <div class="card-header">
-                                   {{ $q->id }} .{{ $q->question }}
+                                   {{ $i++ }} .{{ $q->question }}
                                 </div>
                                 <div class="card-body">
                                     <!-- Default unchecked -->
