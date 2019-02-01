@@ -23,13 +23,19 @@ use Illuminate\Http\Request;
               #cl{
                 margin-top:200px;
               }
+              .con{
 
+                text-align:center;
+              }
             @media only screen and (max-width: 480px) and (min-width: 250px){
               #cl{
                 margin-top:150px;
               }
               #bg{
                 margin-top:150px;
+              }
+              .con{
+                margin-top:100px;
               }
             }
             @media only screen and  (min-width: 600px){
@@ -39,6 +45,9 @@ use Illuminate\Http\Request;
               }
               #bg{
                 margin-top:230px;
+              }
+              .con{
+                margin-top:150px;
               }
             }
             @media only screen and  (min-width: 600px){
@@ -70,7 +79,7 @@ use Illuminate\Http\Request;
   <!-- Links -->
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link b" href="../public" style="color:black;">Home
+      <a class="nav-link b" href="../public/Home" style="color:black;">Home
         <span class="sr-only">(current)</span>
       </a>
     </li>
@@ -84,7 +93,7 @@ use Illuminate\Http\Request;
       <a class="nav-link" href="Homequiz" style="color:black;">Quizz</a>
     </li>
     <li class="nav-item ">
-      <a class="nav-link" href="http://bit.ly/tcregister" style="color:black;">Register</a>
+      <a class="nav-link" href="http://bit.ly/tclubregister" style="color:black;">Register</a>
     </li>
 
     <!-- Dropdown -->
@@ -100,7 +109,17 @@ use Illuminate\Http\Request;
 </nav>
 <!--/.Navbar-->
   <!-- nab bar =================-->
-@if(!Session::has('TimeMessage'))
+  @php
+  $request = request();
+  $pzea = 0;
+  $pz = Quiz_user::where('name',$request->session()->get('name'))->get();
+
+  foreach ($pz as $pze)
+    $pzea = $pze->Quiz_id;
+
+  @endphp
+
+@if($pzea != 2 && $pzea != 1 )
   <div class="container" id="cl">
         <div class="row">
               <div style="margin-left:auto;margin-right:auto;" class="text-center">
@@ -114,37 +133,29 @@ use Illuminate\Http\Request;
               </div>
         </div>
       </div>
-      @else
+
+
+   @elseif($pzea == 2)
+
 
       <div class="container con">
             <div class="row">
                 <div class="col-sm-12">
-                   <div class="card" style="width:100%;height:100px;vertical-align: center;">
+                   <div class="card-body" style="width:100%;height:100px;vertical-align: center;">
                           <h1 class="card-description text-center">
                                   Time up!
                           </h1>
-                          <a href="http://bit.ly/tcregister"><h3>Register as Technology Club Memeber?</h3></a>
+                          <a href="http://bit.ly/tclubregister"><h6>Register as Technology Club Memeber?</h6></a>
                    </div>
                 </div>
             </div>
         </div>
 
 
-@endif
-
-  @php
-  $request = request();
-  $pzea = 0;
-  $pz = Quiz_user::where('name',$request->session()->get('name'))->get();
-
-  foreach ($pz as $pze)
-    $pzea = $pze->Quiz_id;
-
-  @endphp
+    @elseif($pzea == 1)
 
 
 
-  @if(Session::has('quizmessage')  )
 
   <div class="container con">
         <div class="row">
@@ -159,22 +170,8 @@ use Illuminate\Http\Request;
         </div>
   </div>
 
-  @elseif($pzea == 1)
+    @endif
 
-  <div class="container con">
-        <div class="row">
-            <div class="col-sm-12">
-               <div class="card" style="width:100%;height:100px;vertical-align: center;">
-                      <h1 class="card-description text-center">
-                              Thank You!
-                      </h1>
-                      <a href="http://bit.ly/tcregister"><h3>Register as Technology Club Memeber?</h3></a>
-               </div>
-            </div>
-        </div>
-    </div>
-
-  @else
 
     <section>
         <div class="container" id="hello">
@@ -228,7 +225,8 @@ use Illuminate\Http\Request;
             <!--==============submit Section==========-->
         </div>
     </section>
-    @endif
+
+
 
 
     <script>
@@ -254,7 +252,9 @@ use Illuminate\Http\Request;
     if(timeleft <= 0 && secondleft <=0 ){
       clearInterval(downloadTimer);
        @php
-         Session::flash('TimeMessage','Timeup');
+       $name = $request->session()->get('name');
+Quiz_user::where('name','=', $name)->update(['quiz_id' => 2]);
+
        @endphp
         window.location = "Homequiz";
     }
