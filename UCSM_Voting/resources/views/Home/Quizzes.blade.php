@@ -241,7 +241,7 @@ use Illuminate\Http\Request;
         document.getElementById('cl').hidden= true;
         document.getElementById('hello').hidden = false;
 
-        var timeleft = 60;
+        var timeleft = 900;
         var secondleft= 60;
 
     var downloadTimer = setInterval(function(){
