@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/MDB/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/MDB/css/mdb.css">
     <link rel="stylesheet" href="css/media.css">
-    
+
     <link rel="stylesheet" href="css/style.css">
     <title>ucsm voting</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
@@ -21,7 +21,7 @@
 header {
     background-image: url(images/logo2.jpeg);
     background-repeat: none;
-  
+
     background-attachment: scroll;
     background-position: center;
     -webkit-background-size: cover;
@@ -44,7 +44,7 @@ header .intro-text {
 	}
 }
 .logo{
-   
+
     padding-top:5px;
 }
 
@@ -72,21 +72,21 @@ header .intro-text .intro-heading {
     font-size: 50px;
     line-height: 50px;
 
- 
+
 }
   .head-section{
       margin-top:25px;
 
   }
   .head-section h2{
-  
+
       font-weight:700;
       font-size:48px;
-  
+
     text-decoration:underline;
         margin-top:50px;
       color:transparent;
-     
+
 font-weight:normal;
 font-style:normal;
 
@@ -94,11 +94,11 @@ font-style:normal;
 
   }
   .head-section h3{
-    
+
       font-weight:600;
       font-size:40px;
-  
-      
+
+
   }
   h2 {
     font-family: 'freebooter_script_-_altsRg';
@@ -148,16 +148,16 @@ font-style:normal;
       <a class="nav-link" href="Homequiz" style="color:black;">Quizz</a>
     </li>
     <li class="nav-item ">
-      <a class="nav-link" href="http://bit.ly/tcregister" style="color:black;">Register</a>
+      <a class="nav-link" href="http://bit.ly/tclubregister" style="color:black;">Register as club member</a>
     </li>
 
     <!-- Dropdown -->
-   
+
 
   </ul>
   <!-- Links -->
 
-  
+
 </div>
 <!-- Collapsible content -->
 
@@ -169,27 +169,27 @@ font-style:normal;
     <header>
 			<div class="container">
 				<div class="slider-container">
-                    
-                   
-					
+
+
+
 				</div>
 			</div>
 		</header>
-     
+
 
 
     </section>
      <section>
         <div class="container">
             <div class="row">
-                
+
                 <div class="col-sm-12">
                    <a href="list" style="text-decoration: none;color:black;"> <div class="card-body">
                       <div id="image">
                         <img class="card-img-top" src="images/vote2.jpg" alt="Card image cap">
                       </div>
                       <div class="card-description text-center">
-                             <h4 class="f">Vote</h4> 
+                             <h4 class="f">Vote</h4>
                           </div>
                           <hr>
                     </div></a>
@@ -201,7 +201,7 @@ font-style:normal;
                         <img class="card-img-top" src="images/shop3.jpg" alt="Card image cap">
                       </div>
                       <div class="card-description text-center">
-                             <h4 class="f">Shop</h4> 
+                             <h4 class="f">Shop</h4>
                           </div>
                           <hr>
                     </div>
@@ -214,7 +214,7 @@ font-style:normal;
                         <img class="card-img-top" src="images/quizz6.svg" alt="Card image cap">
                       </div>
                       <div class="card-description text-center">
-                             <h4 class="f">Quizz</h4> 
+                             <h4 class="f">Quizz</h4>
                           </div>
                           <hr>
                     </div>
@@ -222,8 +222,8 @@ font-style:normal;
                 </div>
             </div>
         </div>
-        
-    
+
+
     </section>
 
     <!-- Optional JavaScript -->
@@ -232,5 +232,5 @@ font-style:normal;
     <script src="css/MDB/js/bootstrap.min.js"></script>
     <script src="css/MDB/js/mdb.min.js"></script>
     <script src="css/MDB/js/popper.min.js"></script>
-  
+
 </html>

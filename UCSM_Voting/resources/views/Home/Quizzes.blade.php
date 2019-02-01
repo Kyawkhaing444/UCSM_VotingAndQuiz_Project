@@ -93,7 +93,7 @@ use Illuminate\Http\Request;
       <a class="nav-link" href="Homequiz" style="color:black;">Quizz</a>
     </li>
     <li class="nav-item ">
-      <a class="nav-link" href="http://bit.ly/tclubregister" style="color:black;">Register</a>
+      <a class="nav-link" href="http://bit.ly/tclubregister" style="color:black;">Register as club member</a>
     </li>
 
     <!-- Dropdown -->

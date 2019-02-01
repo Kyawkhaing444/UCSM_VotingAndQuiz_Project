@@ -25,7 +25,7 @@
  <nav class="navbar navbar-expand-lg navbar-dark light-color">
 
 <!-- Navbar brand -->
-<a class="navbar-brand " href="../public" style="color:black;"><i class="fas fa-chevron-left"></i></a>
+<a class="navbar-brand " href="../public/Home" style="color:black;"><i class="fas fa-chevron-left"></i></a>
 <h2 class="navbar-brand f" href="#" style="color:black;" >Shop</h2>
 
 <!-- Collapse button -->
@@ -51,16 +51,16 @@
       <a class="nav-link" href="Homequiz" style="color:black;">Quizz</a>
     </li>
     <li class="nav-item ">
-      <a class="nav-link" href="http://bit.ly/tcregister" style="color:black;">Register</a>
+      <a class="nav-link" href="http://bit.ly/tclubregister" style="color:black;">Register as club member</a>
     </li>
 
     <!-- Dropdown -->
-   
+
 
   </ul>
   <!-- Links -->
 
-  
+
 </div>
 <!-- Collapsible content -->
 
@@ -70,7 +70,7 @@
     <section>
         <!--==================shop=================-->
      <div class="container">
-    
+
 
     @foreach ($shop as $s)
 
