@@ -164,7 +164,7 @@ use Illuminate\Http\Request;
                       <h1 class="card-description text-center">
                               Thank You!
                       </h1>
-                      <a href="http://bit.ly/tcregister"><h6 class="text-center">Register as Technology Club Memeber?</h6></a>
+                      <a href="http://bit.ly/tclubregister"><h6 class="text-center">Register as Technology Club Memeber?</h6></a>
                </div>
             </div>
         </div>
