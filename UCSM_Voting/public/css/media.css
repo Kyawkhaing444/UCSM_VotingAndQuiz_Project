@@ -1,4 +1,57 @@
-@media only screen and (max-width: 480px) and (min-width: 250px){
+@media only screen and (min-width: 230px) and (max-width:280){
+  .description{
+      font-size:12px;
+  }
+
+    .card{width:48%;margin-top:20px;}
+    .r{
+     position: absolute;
+   }
+   .card-right{
+       float: right;
+       width:48%;
+   }
+ 
+   h5{
+       font-size:10px ;
+       font-family: sans-serif;
+       font-weight: 0px;
+   }
+   
+   .card .image{
+     
+       height:90px;
+      
+   }
+   .logo{
+    
+    padding-top:20px;
+   }
+   .logo .logo-image{
+   
+       width:70px;
+       height:70px;
+       border-radius:50%;   ;
+       -webkit-border-radius:50%   ;
+       -moz-border-radius:50%   ;
+       -ms-border-radius:50%   ;
+       -o-border-radius:50%   ;
+}
+
+header{
+    height:350px;
+}
+.con{
+
+    margin-top:100px;
+  }
+  h3{
+    font-size: 15px;
+  
+  }
+
+}
+@media only screen and (max-width: 480px) and (min-width: 280px){
     .card{width:48%;margin-top:20px;}
     .r{
      position: absolute;
