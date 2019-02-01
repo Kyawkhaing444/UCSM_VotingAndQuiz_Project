@@ -66,6 +66,7 @@
 </nav>
 <!--/.Navbar-->
   <!-- nab bar =================-->
+
   @if(Session::has('quizmessage'))
 
   <div class="container con">
@@ -100,25 +101,25 @@
                                     <!-- Default unchecked -->
                                         <!-- Group of default radios - option 1 -->
                                         <div class="custom-control custom-radio">
-                                                <input type="radio" class="custom-control-input" id="{{ str_replace('','',$q->item1) }}" name="{{ $q->item1 }}">
-                                                <label class="custom-control-label" for="{{ str_replace('','',$q->item1) }}">{{ $q->item1 }}</label>
+                                                <input type="radio" class="custom-control-input" value= "{{ $q->item1 }}"  id="{{ str_replace(' ','',$q->item1) }}" name="{{ str_replace(' ','',$q->item1) }}">
+                                                <label class="custom-control-label" for="{{ str_replace(' ','',$q->item1) }}">{{ $q->item1 }}</label>
                                             </div>
 
                                             <!-- Group of default radios - option 2 -->
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" class="custom-control-input" id="{{ str_replace('','',$q->item2) }}" name="{{ $q->item1 }}">
-                                                <label class="custom-control-label" for="{{ str_replace('','',$q->item2) }}">{{ $q->item2 }}</label>
+                                                <input type="radio" class="custom-control-input" value= "{{ $q->item2 }}"  id="{{ str_replace(' ','',$q->item2) }}" name="{{ str_replace(' ','',$q->item1) }}">
+                                                <label class="custom-control-label" for="{{ str_replace(' ','',$q->item2) }}">{{ $q->item2 }}</label>
                                             </div>
 
                                             <!-- Group of default radios - option 3 -->
                                             <div class="custom-control custom-radio">
-                                                <input type="radio" class="custom-control-input" id="{{ str_replace('','',$q->item3) }}" name="{{ $q->item1 }}">
-                                                <label class="custom-control-label" for="{{ str_replace('','',$q->item3) }}">{{ $q->item3 }}</label>
+                                                <input type="radio" class="custom-control-input" value= "{{ $q->item3 }}"  id="{{ str_replace(' ','',$q->item3) }}" name="{{ str_replace(' ','',$q->item1) }}">
+                                                <label class="custom-control-label" for="{{ str_replace(' ','',$q->item3) }}">{{ $q->item3 }}</label>
                                             </div>
                                              <!-- Group of default radios - option 3 -->
                                             <div class="custom-control custom-radio">
-                                                    <input type="radio" class="custom-control-input" id="{{ str_replace('','',$q->item4) }}" name="{{ $q->item1 }}">
-                                                    <label class="custom-control-label" for="{{ str_replace('','',$q->item4) }}">{{ $q->item4 }}</label>
+                                                    <input type="radio" class="custom-control-input" value= "{{ $q->item4 }}"  id="{{ str_replace(' ','',$q->item4) }}" name="{{ str_replace(' ','',$q->item1) }}">
+                                                    <label class="custom-control-label" for="{{ str_replace(' ','',$q->item4) }}">{{ $q->item4 }}</label>
                                                 </div>
                                 </div>
                     </div>

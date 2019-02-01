@@ -254,7 +254,7 @@ use App\shopitem;
 @php
     $shop_item = shopitem::where('shop_id',$s->id)->get();
 @endphp
-<div class="modal fade" id="{{ str_replace('','',$s->name) }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+<div class="modal fade" id="{{ str_replace(' ','',$s->name) }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
 
   <!-- Change class .modal-sm to change the size of the modal -->

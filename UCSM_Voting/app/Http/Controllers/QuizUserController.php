@@ -47,13 +47,12 @@ class QuizUserController extends Controller
 
 
        foreach ($quiz as $q) {
-            try{
-               if($input[$q->answer] = $q->answer){
+               if($input[ str_replace(' ','',$q->item1) ] == $q->answer){
                   $p++;
                }
-            }catch (Exception $e) {
+               $request->session()->flash('qp', $input[ str_replace(' ','',$q->item1) ]);
+               $request->session()->flash('qp1', $q->answer);
 
-            }
        }
       $name = $request->session()->get('name');
 
