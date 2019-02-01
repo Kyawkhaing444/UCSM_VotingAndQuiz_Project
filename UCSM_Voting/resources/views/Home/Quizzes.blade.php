@@ -28,7 +28,7 @@ use Illuminate\Http\Request;
               #cl{
                 margin-top:150px;
               }
-              #bt{
+              #bg{
                 margin-top:150px;
               }
             }
@@ -37,7 +37,7 @@ use Illuminate\Http\Request;
               #cl{
                 margin-top:230px;
               }
-              #bt{
+              #bg{
                 margin-top:230px;
               }
             }
@@ -45,7 +45,7 @@ use Illuminate\Http\Request;
               #cl{
                 margin-top:200px;
               }
-              #bt{
+              #bg{
                 margin-top:200px;
               }
             }
@@ -149,15 +149,15 @@ use Illuminate\Http\Request;
   <div class="container con">
         <div class="row">
             <div class="col-sm-12">
-               <div class="card" style="width:100%;height:100px;vertical-align: center;">
+               <div class="card-body" style="width:100%;height:100px;vertical-align: center;" id="bg">
                       <h1 class="card-description text-center">
                               Thank You!
                       </h1>
-                      <a href="http://bit.ly/tcregister"><h3>Register as Technology Club Memeber?</h3></a>
+                      <a href="http://bit.ly/tcregister"><h6 class="text-center">Register as Technology Club Memeber?</h6></a>
                </div>
             </div>
         </div>
-    </div>
+  </div>
 
   @elseif($pzea == 1)
 
