@@ -57,6 +57,7 @@ class QuizUserController extends Controller
       $name = $request->session()->get('name');
 
       Quiz_user::where('name','=', $name)->update(['point' => $p]);
+      Quiz_user::where('name','=', $name)->update(['quiz_id' => 1]);
 
 
       $request->session()->put('quizmessage', 'hello');

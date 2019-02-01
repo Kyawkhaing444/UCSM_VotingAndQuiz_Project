@@ -40,6 +40,7 @@ class CodeController extends Controller
             $request->session()->put('name', $request->name);
 
 
+
             return redirect('Homequiz');
 
 

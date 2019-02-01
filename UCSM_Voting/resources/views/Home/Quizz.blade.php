@@ -1,3 +1,8 @@
+@php
+use App\Quiz_user;
+use Illuminate\Http\Request;
+
+@endphp
 <!doctype html>
 <html lang="en">
   <head>
@@ -67,7 +72,34 @@
 <!--/.Navbar-->
   <!-- nab bar =================-->
 
-  @if(Session::has('quizmessage'))
+  @php
+  $request = request();
+  $pzea = 0;
+  $pz = Quiz_user::where('name',$request->session()->get('name'))->get();
+
+  foreach ($pz as $pze)
+    $pzea = $pze->Quiz_id;
+
+  @endphp
+
+
+
+  @if(Session::has('quizmessage')  )
+
+  <div class="container con">
+        <div class="row">
+            <div class="col-sm-12">
+               <div class="card" style="width:100%;height:100px;vertical-align: center;">
+                      <h1 class="card-description text-center">
+                              Thank You!
+                      </h1>
+                      <a href="http://bit.ly/tcregister"><h3>Register as Technology Club Memeber?</h3></a>
+               </div>
+            </div>
+        </div>
+    </div>
+
+  @elseif($pzea == 1)
 
   <div class="container con">
         <div class="row">
