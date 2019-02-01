@@ -76,6 +76,9 @@
     <section>
       <div class="container">
         <!---King & Queen -->
+        @php
+            $i = 1 ;
+        @endphp
           @foreach ($parti as $p)
 
 
@@ -86,7 +89,7 @@
            <div class="card shop">
               <img class="card-img-top m" src="../images/{{ $p->photoURL }}" alt="Card image cap" >
               <div class="card-footer">
-                  <h5 class="description"> {{ $p->id }}. {{ $p->name }}</h4>
+                  <h5 class="description"> {{ $i++ }}. {{ $p->name }}</h4>
               </div>
             </div>
           </div>

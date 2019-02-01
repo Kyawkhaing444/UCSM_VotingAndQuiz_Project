@@ -31,7 +31,7 @@
 
 <!-- Navbar brand -->
 <a class="navbar-brand " href="../../../selection/{{$cata}}" style="color:black;"><i class="fas fa-chevron-left"></i></a>
-<h2 class="navbar-brand f" href="#" style="color:black;" >No.{{$parti->id}}</h2>
+<h2 class="navbar-brand f" href="#" style="color:black;" >{{$parti->name}}</h2>
 
 <!-- Collapse button -->
 
